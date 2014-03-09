@@ -30,7 +30,7 @@ Osoba nie musi być "techniczna", ze względu na duże zmniejszenie bariery jęz
 
 Po drugie, duże korzyści płyną również dla pracy z punktu widzenia developera.
 Można z pomocą BDD zadawać sobie pytanie "co jest najważniejszą z kolei rzeczą, której ten system jeszcze nie robi?".
-Zadając sobie tego typu pytania pozwala na
+Zadawanie sobie tego typu pytań pozwala na
 odkrycie wartości biznesowej funkcjonalności do zaimplementowania i nadania im na tej podstawie priorytetu. Udzielając
 odpowiedzi na te pytania tak naprawdę formułuje się przypadki testowe w dialekcie BDD: "System powinien...".
 
