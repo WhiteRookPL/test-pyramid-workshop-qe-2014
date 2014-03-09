@@ -1,3 +1,5 @@
+(mocno wstępny i niekompletny draft ;) )
+
 BDD
 ===
 
