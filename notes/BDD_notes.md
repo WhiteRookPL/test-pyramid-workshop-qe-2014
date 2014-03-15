@@ -1,12 +1,53 @@
 (mocno wstępny i niekompletny draft ;) )
 
-BDD
+Behavior-driven development
 ===
 
-Wstęp - o testowaniu słów kilka
+Wstęp - o Test-driven development słów kilka
 ---
 
-....moarmoar....
+Jako, iż BDD oparte jest o TDD, należałoby wprowadzić pewne pojęcia i zarys ideowy przedstawiający o co w tym wszystkim
+chodzi.
+
+TDD opiera cały proces tworzenia oprogramowania o jak najkrótszą pętlę zwrotnej informacji na temat działania
+tworzonego kodu.
+Praca w TDD składa się z wielu iteracji, z których każda obejmuje następujące kroki:
+
+1. Dodaj nowy test.
+2. Uruchom wszystkie testy aby sprawdzić czy nowy test przechodzi bezbłędnie.
+3. Dodaj kod, który sprawi, że nowy test przejdzie.
+
+    1. Może to być hack lub quick-fix - na tym etapie nie dbamy o utrzymywalność kodu.
+
+4. Uruchom wszystkie testy aby sprawdzić czy nowy test przechodzi bezbłędnie oraz czy nie wprowadzono *regresji*.
+
+    1. Jeżeli wszystko jest OK, przejdź dalej.
+    2. W przeciwnym wypadku, wróć do pkt. 3.
+
+5. Oczyść i zrefaktoryzuj kod
+
+    1. W tym momencie należy uczynić zadość wszelkim grzecho popełnionym w 3a.
+
+6. Zacznij kolejną iterację.
+
+> Mianem *regresji* określa się zepsucie istniejących wcześniej testów przez wprowadzenie kodu mającego na celu spełnienie
+wymagań przez test nowo dodany.
+
+W bardziej intuicyjnym ujęciu TDD można przedstawić na następującym diagramie:
+
+![Proces TDD](assets/tdd.png)
+
+
+Główną ideę TDD można sprowadzić do esencjonalnej postaci:
+
+> Dodawaj funkcjonalności i zmieniaj kod jak najmniejszymi krokami.
+>
+> Na każdą okazję miej zabezpieczenie w postaci testu.
+>
+> Jeżeli jakikolwiek test przestanie przechodzić - jedyny kod, jaki możesz dodawać, musi mieć na celu zmianę tego stanu.
+
+BDD vs TDD
+---
 
 Pracując w TDD, na najbardziej początkowym etapie rozwoju aplikacji czasem nie wiadomo od czego zacząć.
 W teorii istnieje jakaś wielka wizja końcowego produktu (albo nawet i nie tyle!), środowiska są przygotowane, ekipa
@@ -19,25 +60,31 @@ Co więcej, w początkowych fazach projektu często, nawet mimo stosowania TDD, 
 okazuje się, że poszliśmy w stronę, która jakimś sposobem okazała się być niezgodna z założeniami strony klienckiej.
 Szkoda, że nikt wcześniej nie był łaskaw o tym nas poinformować.
 
-BDD jest szkieletem pozwalającym na scharakteryzowanie działania aplikacji w postaci *zachowań (behaviors)* uznanych za
-poprawne, które program powinien przejawiać.
+BDD jest szkieletem pozwalającym na scharakteryzowanie działania aplikacji w postaci *zachowań (behaviors)*, które
+powinna przejawiać aby móc uznać ją za spełniającą wymagania klienta.
 
 W BDD, każde zachowanie definiowane jest w języku zbliżonym do naturalnego. Każdy przypadek testowy definiowany jest
 jako opowieść (celowe nawiązanie do user story), definiująca co system robić powinien. Jest to bardzo ważna zmiana w
-stosunku do innych podejść z kliku względów.
+stosunku do innych podejść z kilku względów.
 
-Po pierwsze, istnieje możliwość specyfikacji zachowań w ramach rozmowy z klientem lub inną osobą pełniącą rolę właściciela
-produktu.
+Po pierwsze, istnieje możliwość specyfikacji zachowań w ramach rozmowy z klientem lub inną osobą pełniącą rolę
+właściciela produktu.
 Osoba nie musi być "techniczna", ze względu na duże zmniejszenie bariery językowej.
 
 Po drugie, duże korzyści płyną również dla pracy z punktu widzenia developera.
-Można z pomocą BDD zadawać sobie pytanie "co jest najważniejszą z kolei rzeczą, której ten system jeszcze nie robi?".
-Zadawanie sobie tego typu pytań pozwala na
-odkrycie wartości biznesowej funkcjonalności do zaimplementowania i nadania im na tej podstawie priorytetu. Udzielając
-odpowiedzi na te pytania tak naprawdę formułuje się przypadki testowe w dialekcie BDD: "System powinien...".
+Można z pomocą BDD zadawać sobie pytanie: _"Co jest najważniejszą z kolei rzeczą, której ten system jeszcze nie robi?"_.
 
-W miejsce, gdzie w TDD w naszej sieć testów znajdowałby się `TodoCreationTest`, w BDD umieszcza się
-`TodoCreationBehavior`.
+Zadawanie sobie tego typu pytań pozwala na odkrycie wartości biznesowej funkcjonalności do zaimplementowania i nadania
+im na tej podstawie priorytetu. 
+Udzielając odpowiedzi na te pytania tak naprawdę formułuje się przypadki testowe w dialekcie BDD:
+_"System powinien robić..."_.
+
+Nietrudno wyobrazić sobie o ile łatwiej zrozumieć czego brakuje w momencie gdy nazwa nieprzechodzącego testu brzmi
+`Powinien dodawać nowy artykuł do listy` zamiast `TestDodawania`.
+
+
+Jak to wygląda w praktyce
+---
 
 Gdzie w TDD mielibyśmy do czynienia z:
 
@@ -56,7 +103,7 @@ W BDD mamy:
 
 ```ruby
 # Opis zachowań (niech strona kliencka zdefiniuje czego wymaga od aplikacji)
-Właściwość: tworzenie
+Właściwość: tworzenie listy zadań
     W celu stworzenia listy zadań
     Jako użytkownik
     Chcę tworzyć nowe zadania
@@ -74,11 +121,16 @@ Właściwość: tworzenie
         Wtedy nowe zadanie nie powinno być oznaczone jako 'zrobione'
         Oraz nowe zadanie powinno posiadać treść 'Zrób zakupy'
 
-    Szablon scenariusza: Ukończenie zadanigit a
+    Szablon scenariusza: Ukończenie zadania
         Zakładając istniejące zadanie
         Jeżeli oznaczę zadanie jako wykonane
         Wtedy zadanie powinno widnieć jako wykonane
+```
 
+Każdy z kroków (`Zakładając`, `Jeżeli`, `Wtedy`, `Oraz` ...) ma swoje odzwierciedlenie w kodzie zarządzającym
+aplikacją tak by zrealizowała zachowanie przedstawione w scenariuszu:
+
+```ruby
 # Definicja kroków (niech programista określi co aplikacja musi wykonać by zrealizować dane zachowanie)
 Zakładając /chęć dodania nowego zadania/ do
     todo = Todo.new
@@ -96,6 +148,16 @@ Jeżeli /oznaczę zadanie jako wykonane/ do
     todo.toggleDone
 end
 
-# itd...
+# itd. Definicje kolejnych kroków.
 ```
+
+Przykładowe wyniki testów uzyskane z pomocą narzędzia [Cucumber](http://cukes.info/):
+
+![Cucumber output](http://1.bp.blogspot.com/_X3kaawac_g4/S69i_yGY6OI/AAAAAAAAAzA/njwSl_k0cgE/s1600/Cucumber_Report.png)
+
+([Źródło](http://blog.jonasbandi.net/2010/03/classifying-bdd-tools-unit-test-driven.html))
+
+Po obejrzeniu przykładowego raportu w stylu BDD widać potencjał prezentowania wyników testów (w odpowiednio
+przystosowanej formie) jako sprawozdania z realizacji projektu, przedstawianego interesariuszom biznesowym np. na koniec
+sprintu.
 
