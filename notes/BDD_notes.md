@@ -183,6 +183,9 @@ Jak BDD ma się do manifestu Agile?
 **Ludzie i interakcje**
 
 BDD rozszerza wspólną płasczyznę komunikacji między 'biznesem' a zespołem programistów.
+Komunikacja stanowi podstawę pętli informacji zwrotnej.
+Im wyższa jakość i częstotliwość komunikacji, tym pętla jest ciaśniejsza, co umożliwia barzdiej precyzyjną kontrolę nad
+postępem prac i kierunkiem realizacji projektu.
 Specyfikacja systemu powinna być tworzona wspólnie, poprzez wspólne rozmowy i inne interakcje wspomagające wymianę
 informacji oraz punktów widzenia. Obydwie strony czerpią tym sposobem dodatkowe korzyści płynące z dyskusji -
 poszerza się horyzont, zostają zadane nowe pytania, wypływają dodatkowe wyzwania. Dodatkowo, próby krystalizowania
