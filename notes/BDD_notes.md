@@ -22,19 +22,18 @@ Praca w TDD składa się z wielu iteracji, z których każda obejmuje następuj�
     1. Jeżeli wszystko jest OK, przejdź dalej.
     2. W przeciwnym wypadku, wróć do pkt. 3.
 
-5. Oczyść i zrefaktoryzuj kod
+5. Oczyść i zrefaktoryzuj kod.
 
-    1. W tym momencie należy uczynić zadość wszelkim grzecho popełnionym w 3a.
+    1. W tym momencie należy uczynić zadość wszelkim grzechom popełnionym w 3.1.
 
 6. Zacznij kolejną iterację.
 
-> Mianem *regresji* określa się zepsucie istniejących wcześniej testów przez wprowadzenie kodu mającego na celu spełnienie
-wymagań przez test nowo dodany.
+> Mianem *regresji* określa się zepsucie istniejących wcześniej testów podczas wprowadzania kodu mającego na celu
+> spełnienie wymagań testu nowo dodanego.
 
 W bardziej intuicyjnym ujęciu TDD można przedstawić na następującym diagramie:
 
 ![Proces TDD](assets/tdd.png)
-
 
 Główną ideę TDD można sprowadzić do esencjonalnej postaci:
 
