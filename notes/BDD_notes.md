@@ -1,5 +1,3 @@
-(mocno wstępny i niekompletny draft ;) )
-
 Behavior-driven development
 ===
 
@@ -161,3 +159,41 @@ Po obejrzeniu przykładowego raportu w stylu BDD widać potencjał prezentowania
 przystosowanej formie) jako sprawozdania z realizacji projektu, przedstawianego interesariuszom biznesowym np. na koniec
 sprintu.
 
+BDD a Agile
+---
+
+BDD jest silnie związane ze zwinnymi metodykami tworzenia oprogramowania.
+Specyfikacje w Cucumberze i testy definiujące zachowania to nie wszystko.
+Wszystkie te środki powinny tak naprawdę stanowić narzędzia wspierające podstawowe wartości metodyk zwinnych.
+
+Jak BDD ma się do manifestu Agile?
+
+> Wytwarzając oprogramowanie i pomagając innym w tym zakresie, odkrywamy lepsze sposoby wykonywania tej pracy.
+> W wyniku tych doświadczeń przedkładamy:
+>
+> * **Ludzi i interakcje** ponad procesy i narzędzia.
+> * **Działające oprogramowanie** ponad obszerną dokumentację.
+> * **Współpracę z klientem** ponad formalne ustalenia.
+> * **Reagowanie na zmiany** ponad podążanie za planem.
+
+Wizja -> Cel -> Zdolność -> Ficzer -> Story -> Scenariusz -> Kod
+
+**Ludzie i interakcje**
+
+BDD rozszerza wspólną płasczyznę komunikacji między 'biznesem' a zespołem programistów.
+Specyfikacja systemu powinna być tworzona wspólnie, poprzez wspólne rozmowy i inne interakcje wspomagające wymianę
+informacji oraz punktów widzenia. Obydwie strony czerpią tym sposobem dodatkowe korzyści płynące z dyskusji -
+poszerza się horyzont, zostają zadane nowe pytania, wypływają dodatkowe wyzwania. Dodatkowo, próby krystalizowania
+scenariuszy w ramach konwersacji powodują rozszerzanie się kontekstu projektu współdzielonego pomiędzy uczestnikami.
+
+**Działające oprogramowanie**
+
+BDD powinno ułatwiać tworzenie oprogramowania. Należy zachować umiar i rozsądek przy 
+doborze narzędzi i platform. Mają stanowić one podporę dla zespołu- a nie potwora spaghetti, którego trzeba wlec za sobą.
+
+**Współpraca z klientem** i **Reagowanie na zmiany**
+
+Scenariusz w BDD stanowi *pomysł*, nie jest *obietnicą* czy *zobowiązaniem*.
+(Miejsce na zobowiązania jest gdzie indziej.)
+W dowolnej chwili realizacji projektu zestaw scenariuszy testowych powinien odwierciedlać stan systemu, zarówno w
+kontekście etapu jego realizacji (strona developerska) jak i wizji (strona biznesowa).
