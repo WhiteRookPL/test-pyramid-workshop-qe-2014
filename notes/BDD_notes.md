@@ -180,8 +180,6 @@ Jak BDD ma się do manifestu Agile?
 > * **Współpracę z klientem** ponad formalne ustalenia.
 > * **Reagowanie na zmiany** ponad podążanie za planem.
 
-Wizja -> Cel -> Zdolność -> Ficzer -> Story -> Scenariusz -> Kod
-
 **Ludzie i interakcje**
 
 BDD rozszerza wspólną płasczyznę komunikacji między 'biznesem' a zespołem programistów.
