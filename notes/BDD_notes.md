@@ -51,6 +51,7 @@ Pracując w TDD, na najbardziej początkowym etapie rozwoju aplikacji czasem nie
 W teorii istnieje jakaś wielka wizja końcowego produktu (albo nawet i nie tyle!), środowiska są przygotowane, ekipa
 napojona kawą i nastaje czas by napisać pierwszy prosty test.
 Ale czego miałby on dotyczyć?
+
 Znajdujemy się w sytuacji, gdzie jest za wcześnie by dysponoweć na tyle granularną wiedzą by móc bez zawahania rozpocząć
 implementację od konkretnego komponentu.
 
@@ -60,6 +61,9 @@ Szkoda, że nikt wcześniej nie był łaskaw o tym nas poinformować.
 
 BDD jest szkieletem pozwalającym na scharakteryzowanie działania aplikacji w postaci *zachowań (behaviors)*, które
 powinna przejawiać aby móc uznać ją za spełniającą wymagania klienta.
+
+Jeżeli traktować TDD jako pętlę informacji zwrotnej między developerem a jego kodem, tak BDD stanowi analogiczną pętlę
+informacji zwrotnej pomiędzy zespołem dostarczającym oprogramowanie, a interesariuszami definiującymi wymagania.
 
 W BDD, każde zachowanie definiowane jest w języku zbliżonym do naturalnego. Każdy przypadek testowy definiowany jest
 jako opowieść (celowe nawiązanie do user story), definiująca co system robić powinien. Jest to bardzo ważna zmiana w
