@@ -1,0 +1,19 @@
+source 'https://rubygems.org'
+
+gem 'bundler'
+
+gem 'rspec'
+gem 'rspec-rails'
+
+gem 'webrat'
+gem 'database_cleaner'
+
+gem 'cucumber'
+gem 'cucumber-rails'
+
+gem 'sqlite3'
+
+gem 'selenium-webdriver',   '~> 2.38.0'
+gem 'capybara',             '2.0.2'
+
+gem 'rails',                '~> 4.0.4'

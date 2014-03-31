@@ -10,11 +10,10 @@ Kod zadania:
 koszyk = [ 'jabłko', 'banan', 'jabłko', 'pomarańcza', 'jabłko', 'banan' ]
 ilosc_jablek = 1
 
-koszyk.each |element|
+koszyk.each do |element|
   if element == 'jabłko'
     ilosc_jablek += 1
   end
-end
 ```
 
 Kod poprawny:
