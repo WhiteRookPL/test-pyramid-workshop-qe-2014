@@ -1,30 +1,20 @@
 Feature: User Management
   In order to work with the application and manage user account
   As a unknown user
-  I want to sing up to the application
+  I want to sign in and log in to the application
 
   Scenario: Create new user
-    Given I have no users
-    When I create user "Krystian" with random password
-    Then I should see "Krystian"
-    And User should have password set up
+    Given there are no users
+    When "Krystian" account is created with random password
+    Then "Krystian" account should be available
+    And "Krystian" should have non empty password
 
   Scenario: Sucessful authentication
-    Given I have one user "Krystian" with password "123"
-    When I authenticate account "Krystian" with password "123"
-    Then I should have authenticated user
+    Given there is one user "Krystian" with password "123"
+    When authenticate "Krystian" with password "123"
+    Then "Krystian" should be authenticated
 
   Scenario: Unsucessful authentication
-    Given I have one user "Krystian" with password "123"
-    When I authenticate account "Krystian" with password "Invalid Password"
-    Then I should not have authenticated user
-
-  Scenario: Lists are connected to the user
-    Given I have one authenticated user "Krystian" with password "123"
-    And I have one user "Andrzej" with password "456"
-    And I have one list named "Krystian's list" with 1 task for "Krystian"
-    And I have no list for "Andrzej"
-    And I should see "Krystian's list"
-    When I deauthenticate account "Krystian"
-    And I authenticate account "Andrzej" with password "456"
-    Then I should see no lists
+    Given there is one user "Krystian" with password "123"
+    When authenticate "Krystian" with password "Invalid Password"
+    Then "Krystian" should not be authenticated

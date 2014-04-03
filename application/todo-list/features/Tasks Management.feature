@@ -1,34 +1,34 @@
 Feature: Tasks Management
-  In order to create new task which have to be done
+  In order to manage tasks and assignments
   As a Krystian
-  I want to create and manage tasks
+  I want to add tasks to my TODO lists
 
   Scenario: Create new item
-    Given I have one empty list with name "New list"
-    When I add new task with name "Task to do"
-    And I open "New list"
-    Then I should see one task inside
-    And I should see "Task to do"
+    Given there is one empty list with name "New list"
+    When new task with name "Task to do" is added to the "New list"
+    And "New list" will be opened
+    Then 1 task in "New list" is available
+    And "Task to do" item should be available
 
-  Scenario: Task should have a date
-    Given I have one list with one item named "Non-empty list"
-    When I open "Non-empty list"
-    Then I should see today's date
+  Scenario: Task should has a date
+    Given there is one list named "Non-empty list" with one item named "Item on the list"
+    When "Non-empty list" will be opened
+    Then "Item on the list" item should have today's date
 
   Scenario: Task should have a default state "Open"
-    Given I have one list with one item named "Non-empty list"
-    When I open "Non-empty list"
-    Then I should see task marked as open
+    Given there is one list named "Non-empty list" with one item named "Opened by default"
+    When "Non-empty list" will be opened
+    Then "Opened by default" item should be opened
 
-  Scenario: Task state can be modifed
-    Given I have one list with one item named "Non-empty list"
-    When I open "Non-empty list"
-    And I close first visible task
-    Then I should see task marked as closed
+  Scenario: Task state can be modified
+    Given there is one list named "Non-empty list" with one item named "Task for modification"
+    When "Non-empty list" will be opened
+    And "Task for modification" item will be closed
+    Then "Task for modification" item should be closed
 
   Scenario: Task state can be toggled
-    Given I have one list with one item named "Non-empty list"
-    When I open "Non-empty list"
-    And I close first visible task
-    And I open first visible task
-    Then I should see task marked as open
+    Given there is one list named "Non-empty list" with one item named "Task for toggling"
+    When "Non-empty list" will be opened
+    And "Task for toggling" item will be closed
+    And "Task for toggling" item will be opened
+    Then "Task for toggling" item should be closed
