@@ -3,11 +3,11 @@ Given(/^"([^"]+)" should have "([^"]+)"$/) do |username, list|
 end
 
 Given(/^there are no users$/) do
-  pending
+  User.delete_all
 end
 
 Given(/^there is one user "([^"]+)" with password "([^"]+)"$/) do |username, password|
-  pending
+  User.create!(:username => username, :password => password)
 end
 
 Given(/^there is one authenticated user "([^"]+)" with password "([^"]+)"$/) do |username, password|
@@ -15,11 +15,11 @@ Given(/^there is one authenticated user "([^"]+)" with password "([^"]+)"$/) do 
 end
 
 When(/^"([^"]+)" account is created with random password$/) do |username|
-  pending
+  User.create!(:username => username, :password => random_password())
 end
 
 When(/^authenticate "([^"]+)" with password "([^"]+)"$/) do |username, password|
-  pending
+  User.where(:username => username).first.authenticate!(password)
 end
 
 When(/^"([^"]+)" log out$/) do |username|
@@ -27,19 +27,21 @@ When(/^"([^"]+)" log out$/) do |username|
 end
 
 Then(/^"([^"]+)" should have non empty password$/) do |username|
-  pending
+  user = User.where(:username => username).first
+
+  user.password && !user.password.empty?
 end
 
 Then(/^"([^"]+)" should be authenticated$/) do |username|
-  pending
+  User.where(:username => username).first.is_authenticated?
 end
 
 Then(/^"([^"]+)" should not be authenticated$/) do |username|
-  pending
+  !User.where(:username => username).first.is_authenticated?
 end
 
 Then(/^"([^"]+)" account should be available$/) do |username|
-  pending
+  User.where(:username => username).count == 1
 end
 
 Then(/^"([^"]+)" should have no lists$/) do |username|
