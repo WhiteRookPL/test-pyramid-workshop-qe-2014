@@ -1,63 +1,90 @@
 Given(/^there is one list named "([^"]+)" with (\d+) task for "([^"]+)"$/) do |listName, tasksNumber, username|
-  pending
+  user = User.where(:username => username).first
+  list = List.create(:name => listName)
+
+  (0...tasksNumber.to_i).each do
+    list.tasks.build(:title => random_task_name())
+  end
+
+  list.user = user
+  list.save!
 end
 
 Given(/^there is one list named "([^"]+)" with one item named "([^"]+)"$/) do |listName, itemName|
-  pending
+  list = List.create(:name => listName)
+  list.tasks.build(:title => itemName)
+  list.save!
 end
 
 Given(/^there are lists titled "([^"]+)", "([^"]+)"$/) do |firstList, secondList|
-  pending
+  List.create!(:name => firstList)
+  List.create!(:name => secondList)
 end
 
 Given(/^there is one list named "([^"]+)" with (\d+) random tasks?$/) do |listName, tasksNumber|
-  pending
+  list = List.create(:name => listName)
+
+  (0...tasksNumber.to_i).each do
+    list.tasks.build(:title => random_task_name())
+  end
+
+  list.save!
 end
 
 Given(/^there is one empty list with name "([^"]+)"$/) do |listName|
-  pending
+  List.create!(:name => listName)
 end
 
 Given(/^"([^"]+)" should see "([^"]+)"$/) do |username, listName|
-  pending
+  User.where(:username => username).first.lists.where(:name => listName).count.should == 1
 end
 
 Given(/^there are no lists$/) do
-  pending
+  List.delete_all
 end
 
-When(/^first visible task will be closed$/) do
-  pending
+When(/^first visible task in list "([^"]+)" will be closed$/) do |listName|
+  list = List.where(:name => listName).first
+
+  list.tasks.first.close!
+  list.tasks.first.save!
 end
 
 When(/^"([^"]+)" will be opened$/) do |listName|
-  pending
+  list = List.where(:name => listName).first
+
+  list.make_available!
+  list.save
 end
 
 When(/^"([^"]+)" will be created$/) do |listName|
-  pending
+  List.create!(:name => listName)
 end
 
 When(/^new task with name "([^"]+)" is added to the "([^"]+)"$/) do |taskName, listName|
-  pending
+  list = List.where(:name => listName).first
+
+  task = Task.create(:title => taskName)
+  task.list = list
+  task.save!
 end
 
 Then(/^"([^"]+)" has no tasks inside$/) do |listName|
-  pending
+  List.where(:name => listName).first.tasks.count.should == 0
 end
 
 Then(/^"([^"]+)" should be available$/) do |listName|
-  pending
-end
-
-Then(/^"([^"]+)" should has today's date$/) do |listName|
-  pending
-end
-
-Then(/^"([^"]+)" has (\d+) tasks? inside$/) do |listName, tasksNumber|
-  pending
+  List.where(:name => listName).first.available.should == true
 end
 
 Then(/^"([^"]+)" should not be available$/) do |listName|
-  pending
+  List.where(:name => listName).first.available.should == false
+end
+
+Then(/^"([^"]+)" should has today's date$/) do |listName|
+  List.where(:name => listName).first.date.should == Date.today
+end
+
+Then(/^"([^"]+)" has (\d+) tasks? inside$/) do |listName, tasksNumber|
+  List.where(:name => listName).first.tasks.count.should == tasksNumber.to_i
 end

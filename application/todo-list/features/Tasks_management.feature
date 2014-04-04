@@ -8,7 +8,7 @@ Feature: Tasks Management
     When new task with name "Task to do" is added to the "New list"
     And "New list" will be opened
     Then 1 task in "New list" is available
-    And "Task to do" item should be available
+    And "Task to do" item should be opened
 
   Scenario: Task should has a date
     Given there is one list named "Non-empty list" with one item named "Item on the list"

@@ -11,10 +11,8 @@ Feature: User Management
 
   Scenario: Sucessful authentication
     Given there is one user "Krystian" with password "123"
-    When authenticate "Krystian" with password "123"
-    Then "Krystian" should be authenticated
+    Then "Krystian" should be authenticated with password "123"
 
   Scenario: Unsucessful authentication
     Given there is one user "Krystian" with password "123"
-    When authenticate "Krystian" with password "Invalid Password"
-    Then "Krystian" should not be authenticated
+    Then "Krystian" should not be authenticated with password "Invalid Password"

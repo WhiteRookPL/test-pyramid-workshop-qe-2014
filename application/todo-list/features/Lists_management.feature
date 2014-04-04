@@ -20,11 +20,11 @@ Feature: List Management
     Then "My empty list" has no tasks inside
 
   Scenario: Tasks can be assigned to the list
-    Given there is one empty list with name "At first empty list"
+    Given there is one empty list with name "New list"
     When "New list" will be opened
     And new task with name "New task" is added to the "New list"
-    Then "New task" has 1 task inside
-    And "New task" item should be available
+    Then "New list" has 1 task inside
+    And "New task" item should be opened
 
   Scenario: List can have many tasks
     Given there is one list named "My non-empty list" with 3 random tasks
@@ -34,11 +34,11 @@ Feature: List Management
   Scenario: List with not all closed tasks is visible
     Given there is one list named "Open list" with 2 random tasks
     When "Open list" will be opened
-    And first visible task will be closed
+    And first visible task in list "Open list" will be closed
     Then "Open list" should be available
 
   Scenario: List with all closed tasks is invisible
     Given there is one list named "Closed list" with 1 random task
     When "Closed list" will be opened
-    And first visible task will be closed
+    And first visible task in list "Closed list" will be closed
     Then "Closed list" should not be available
