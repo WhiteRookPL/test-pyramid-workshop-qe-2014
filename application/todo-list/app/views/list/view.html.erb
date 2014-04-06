@@ -1,7 +1,26 @@
 <h1>Tasks for "<%= h(@list.name) %>" of <%= @current_user %></h1>
 
+<ul>
 <% @list.tasks.each do |task| %>
-  <input id="task<%= h(task.id) %>" type="checkbox" <% if task.closed %>checked="checked"<% end %> />
-  <h2><%= h(task.title) %></h2>
-  <p><%= h(task.date) %></p>
+  <li>
+    <h2><%= h(task.title) %></h2>
+    <input class="state-of-task"
+           type="checkbox"
+           data-task-id="<%= task.id %>"
+           <% if task.closed %>checked="checked"<% end %> />
+    <span><%= h(task.date) %></span> <a href="#" class="delete-task" data-task-id="<%= task.id %>">X</a>
+  </li>
 <% end %>
+</ul>
+
+<section id="new-task" class="hidden">
+  <div>
+    <label for="new-task-title">Task title:</label>
+    <input type="text" id="new-task-title" value="" placeholder="Title of new task..." />
+    <input type="button" id="add-new-task" value="Add" />
+  </div>
+</section>
+
+<!-- <section>
+  <a href="#" data-list-id="<%= @list.id %>">Reopen</a>
+</section> -->

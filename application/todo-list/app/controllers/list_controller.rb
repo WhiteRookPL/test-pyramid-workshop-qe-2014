@@ -1,5 +1,3 @@
-require_relative '../helpers/AuthenticationHelper'
-
 class ListController < ApplicationController
   def checkAuthentication
     if !cookies[:SESSION]

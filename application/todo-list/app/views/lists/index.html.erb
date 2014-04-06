@@ -1,6 +1,18 @@
 <h1>Lists for <%= @current_user %></h1>
+
+<ul>
 <% @lists.each do |list| %>
-  <h2><a href="/list/view/<%= list.id %>"><%= h(list.name) %></a></h2>
-  <p><%= h(list.date) %></p>
-  <p><%= h(list.available) %></p>
+  <li>
+    <h2><a href="/list/view/<%= list.id %>"><%= h(list.name) %></a></h2>
+    <span><%= h(list.date) %></span> <span><%= h(list.available) %></span> <a href="#" data-list-id="<%= list.id %>">X</a>
+  </li>
 <% end %>
+</ul>
+
+<section id="new-list" class="hidden">
+  <div>
+    <label for="new-list-name">List name:</label>
+    <input type="text" id="new-list-name" value="" placeholder="Name of new list..." />
+    <input type="button" id="add-new-list" value="Add" />
+  </div>
+</section>
