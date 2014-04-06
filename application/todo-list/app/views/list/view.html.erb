@@ -1,0 +1,7 @@
+<h1>Tasks for "<%= h(@list.name) %>" of <%= current_user %></h1>
+
+<% @list.tasks.each do |task| %>
+  <input id="task<%= h(task.id) %>" type="checkbox" <% if task.closed %>checked="checked"<% end %> />
+  <h2><%= h(task.title) %></h2>
+  <p><%= h(task.date) %></p>
+<% end %>

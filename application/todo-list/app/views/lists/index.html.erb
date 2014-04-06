@@ -1,0 +1,6 @@
+<h1>Lists of <%= current_user %></h1>
+<% @lists.each do |list| %>
+  <h2><a href="/list/view/<%= list.id %>"><%= h(list.name) %></a></h2>
+  <p><%= h(list.date) %></p>
+  <p><%= h(list.available) %></p>
+<% end %>
