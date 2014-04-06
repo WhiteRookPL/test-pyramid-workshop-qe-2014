@@ -17,13 +17,11 @@ class ListController < ApplicationController
       @list = List.where(:id => params[:id]).first
       @current_user = current_user
 
-      # Not available lists aren't visible.
       if !@list.available
         redirect_to '/'
         return
       end
 
-      # It's not your list.
       if @list.user.username != current_user
         redirect_to '/'
         return
@@ -31,23 +29,78 @@ class ListController < ApplicationController
     end
   end
 
-  def close_task
+  def toggle_task
     if checkAuthentication()
+      list = List.where(:id => params[:id]).first
+
+      if list.user.username != current_user
+        redirect_to '/'
+        return
+      end
+
+      task = list.tasks.where(:id => params[:taskId]).first
+
+      if task.closed
+        task.open!
+      else
+        task.close!
+      end
+
+      task.save!
     end
+
+    head :ok
   end
 
   def new_task
     if checkAuthentication()
+      list = List.where(:id => params[:id]).first
+
+      if list.user.username != current_user
+        redirect_to '/'
+        return
+      end
+
+      list.tasks.build(:title => params[:title])
+      list.save!
     end
+
+    head :ok
   end
 
   def delete_task
     if checkAuthentication()
+      list = List.where(:id => params[:id]).first
+
+      if list.user.username != current_user
+        redirect_to '/'
+        return
+      end
+
+      list.tasks.where(:id => params[:taskId]).first.destroy
+      list.save!
     end
+
+    head :ok
   end
 
   # def reopen_list
   #   if checkAuthentication()
+  #     list = List.where(:id => params[:id]).first
+
+  #     if list.user.username != current_user
+  #       redirect_to '/'
+  #       return
+  #     end
+
+  #     list.tasks.each do |task|
+  #       task.open!
+  #       task.save!
+  #     end
+
+  #     list.save!
   #   end
+
+  #   head :ok
   # end
 end

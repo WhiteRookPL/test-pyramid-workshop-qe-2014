@@ -1,18 +1,21 @@
 <h1>Lists for <%= @current_user %></h1>
 
+<a href="/users/logout">Log out</a>
+
 <ul>
 <% @lists.each do |list| %>
   <li>
-    <h2><a href="/list/view/<%= list.id %>"><%= h(list.name) %></a></h2>
-    <span><%= h(list.date) %></span> <span><%= h(list.available) %></span> <a href="#" data-list-id="<%= list.id %>">X</a>
+    <span><a href="/lists/<%= list.id %>"><%= h(list.name) %></a></span>
+    <span><%= h(list.date) %></span> <span><%= h(list.available) %></span>
+    <input type="button" class="delete-list" data-list-id="<%= list.id %>" value="Delete" />
   </li>
 <% end %>
 </ul>
 
-<section id="new-list" class="hidden">
+<section id="new-list">
   <div>
     <label for="new-list-name">List name:</label>
-    <input type="text" id="new-list-name" value="" placeholder="Name of new list..." />
+    <input type="text" id="new-list-name" value="" placeholder="Name of the new list..." />
     <input type="button" id="add-new-list" value="Add" />
   </div>
 </section>

@@ -11,3 +11,11 @@
  *= require_self
  *= require_tree .
  */
+
+.hidden {
+  display: none;
+}
+
+.invalid {
+  outline: 1px solid red;
+}

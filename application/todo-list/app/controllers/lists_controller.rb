@@ -21,11 +21,26 @@ class ListsController < ApplicationController
 
   def new_list
     if checkAuthentication()
+      list = List.create(:name => params[:name])
+      list.user_id = User.where(:username => current_user).first.id
+      list.save!
     end
+
+    head :ok
   end
 
   def delete_list
     if checkAuthentication()
+      list = List.where(:id => params[:id]).first
+
+      if list.user.username != current_user
+        redirect_to '/'
+        return
+      end
+
+      list.destroy
     end
+
+    head :ok
   end
 end
