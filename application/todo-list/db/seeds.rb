@@ -1,5 +1,5 @@
-andrzej = User.create!(:username => "andrzej", :password => "test", :password_confirmation => "test")
-krystian = User.create!(:username => "krystian", :password => "test", :password_confirmation => "test")
+andrzej = User.create!(:username => "andrzej", :password => "test")
+krystian = User.create!(:username => "krystian", :password => "test")
 
 list = List.create!(:name => "Test list")
 list.tasks.build(:title => "Test task on opened list")
