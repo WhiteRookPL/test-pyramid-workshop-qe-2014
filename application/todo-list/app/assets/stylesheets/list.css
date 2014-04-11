@@ -30,13 +30,14 @@
     border: 1px solid #333434;
     height: 1.5rem;
     margin-bottom: .7rem;
+    position: relative;
 }
 
 .task-list__task--done {
     background: rgb(115, 150, 110);
-    
 }
 
+.task-list__info,
 .task-list__task__info {
     float: left;
     line-height: 1.5rem;
@@ -60,7 +61,8 @@
 }
 
 input.task-state,
-.task-list__task__delete{
+.task-list__delete,
+.task-list__task__delete {
     cursor: pointer;
     font-size: 0.875rem;
     font-family: 'Source Sans', helvetica, arial, sans-serif;
@@ -72,6 +74,7 @@ input.task-state,
     text-shadow: 0 -1px rgba(0,0,0,0.69);
 }
 
+.task-list__delete,
 .task-list__task__delete {
     box-shadow: inset 0 1px rgba(255,255,255,0.36), inset 0 -1px rgba(0,0,0,0.36), inset 1px 0 rgba(0,0,0,0.36);
     background: rgb(200, 75, 60);
@@ -81,11 +84,12 @@ input.task-state,
     float:right;
     padding: 0 1em;
 }
-
+.task-list__delete:hover,
 .task-list__task__delete:hover {
     background: rgb(225, 101, 85);
 }
 
+.task-list__delete:active,
 .task-list__task__delete:active {
     background: rgb(165, 39, 25);
     box-shadow: inset 0 1px rgba(0,0,0,0.36);

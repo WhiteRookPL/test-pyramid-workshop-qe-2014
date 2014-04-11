@@ -1,21 +1,26 @@
-<h1>Lists for <%= @current_user %></h1>
+<h1>
+  Lists for
+  <%= @current_user %></h1>
 
-
-
-<ul>
-<% @lists.each do |list| %>
-  <li>
-    <span><a href="/lists/<%= list.id %>"><%= h(list.name) %></a></span>
-    <span><%= h(list.date) %></span> <span><%= h(list.available) %></span>
-    <input type="button" class="delete-list" data-list-id="<%= list.id %>" value="Delete" />
-  </li>
-<% end %>
+<ul class="task-list">
+  <% @lists.each do |list| %>
+    <% if list.available == true %>
+      <li class="task-list__task task-list__task--highlightable cf transition">
+        <a href="/lists/<%= list.id %>" class="task-list__info">
+          <span class="task-list__task__info__date">
+            <%= h(list.date) %></span>
+          <span class="task-list__task__info__title">
+            <%= h(list.name) %></span>
+        </a>
+        <input type="button" class="task-list__delete pressable transition" data-list-id="<%= list.id %>" value="Delete" /></li>
+    <% end %>
+  <% end %>
 </ul>
 
 <hr class="segment-divider" />
-<section id="new-list">
+<section id="new-list" class="control-group">
   <div>
-  <a href="/users/logout" class="topcoat-button-bar__button--large data-entry__back">Quit</a>
+    <a href="/users/logout" class="topcoat-button-bar__button--large data-entry__back">Quit</a>
     <input type="text" class="topcoat-text-input data-entry__input transition" id="new-list-name" value="" placeholder="Name of the new list..." />
     <input type="button" class="topcoat-button-bar__button--large data-entry__submit topcoat-button--large--cta transition" id="add-new-list" value="Add" />
   </div>

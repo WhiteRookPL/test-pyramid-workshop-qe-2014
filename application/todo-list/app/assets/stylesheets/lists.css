@@ -16,3 +16,21 @@ They will automatically be included in application.css. */
     border-bottom-left-radius: 0;
     line-height: 1.688rem;
 }
+
+.task-list__info {
+    display: block;
+    float: none;
+    padding-left: 1rem;
+    text-align: left;
+}
+
+.task-list__delete {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.task-list__task--highlightable:hover {
+    background: rgb(139, 141, 141);
+    box-shadow: 0 0 1px white;
+}

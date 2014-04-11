@@ -1,7 +1,7 @@
 $(function() {
     "use strict";
 
-    $(".delete-list").on("click", function (event) {
+    $(".task-list__delete").on("click", function (event) {
         var $this = $(this);
 
         $this.prop("disabled", true);

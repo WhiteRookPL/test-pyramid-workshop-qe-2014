@@ -44,13 +44,17 @@ body {
   text-align: center;
 }
 
-.app.light {
-  color: #181919;
-  background: #F4F4F4;
-}
 .app.dark {
   color: #F0F1F1;
   background: #4A4D4E;
+}
+
+.app.dark a,
+.app.dark a:hover,
+.app.dark a:active,
+.app.dark a:visited {
+  color: #F0F1F1;
+  text-decoration: none;
 }
 
 .app h1 {
