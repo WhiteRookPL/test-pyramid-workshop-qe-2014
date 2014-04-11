@@ -21,7 +21,12 @@ class ListsController < ApplicationController
 
   def new_list
     if checkAuthentication()
+      if List.find_by name: params[:name]
+        head :conflict
+        return
+      end
       list = List.create(:name => params[:name])
+
       list.user_id = User.where(:username => current_user).first.id
       list.save!
     end
