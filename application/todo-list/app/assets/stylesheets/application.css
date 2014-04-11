@@ -19,3 +19,38 @@
 .invalid {
   outline: 1px solid red;
 }
+
+html,body{
+  margin:0;
+  padding:0;
+  height: 100%;
+}
+
+body {
+  font-family: source-sans-pro, sans-serif;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+}
+
+.app {
+  border-radius: 20px;
+  margin: auto;
+  min-width: 200px;
+  width: 40%;
+}
+
+.app.light {
+  color: #181919;
+  background: #F4F4F4;
+}
+.app.dark {
+  color: #F0F1F1;
+  background: #4A4D4E;
+}
+
+.app h1 {
+  font-weight: 300;
+}
+
+

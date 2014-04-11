@@ -1,6 +1,6 @@
 <h1>Tasks for "<%= h(@list.name) %>" of <%= @current_user %></h1>
 
-<a href="/users/logout">Log out</a>
+<a href="/">Back</a>
 
 <ul>
 <% @list.tasks.each do |task| %>
@@ -19,11 +19,12 @@
 <% end %>
 </ul>
 
+
+<hr class="segment-divider" />
 <section id="new-task">
   <div>
-    <label for="new-task-title">Task title:</label>
-    <input type="text" id="new-task-title" value="" placeholder="Title of the new task..." />
-    <input type="button" id="add-new-task" data-list-id="<%= @list.id %>" value="Add" />
+    <input type="text" class="topcoat-text-input data-entry__input transition" id="new-task-title" value="" placeholder="Title of the new task..." />
+    <input type="button" class="topcoat-button-bar__button--large data-entry__submit transition" id="add-new-task" data-list-id="<%= @list.id %>" value="Add" />
   </div>
 </section>
 

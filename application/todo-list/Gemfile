@@ -10,7 +10,7 @@ gem 'webrat'
 gem 'database_cleaner'
 
 gem 'cucumber'
-gem 'cucumber-rails'
+gem 'cucumber-rails',       :require => false
 
 gem 'sqlite3'
 
@@ -21,3 +21,4 @@ gem 'rails',                '~> 4.0.4'
 
 gem 'turbolinks'
 gem 'jquery-rails',         '~> 2.3.0'
+gem 'bower-rails'

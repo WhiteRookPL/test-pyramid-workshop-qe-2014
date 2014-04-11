@@ -3,11 +3,18 @@
 <head>
   <title>Todo List</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "topcoat/css/topcoat-desktop-dark", "media: all", "data-turbolinks-track" => true %>  
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
 </head>
-<body>
+<body >
+    <header>
+        <h1>To do</h1>
+    </header>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-  <%= yield %>
+  <section class="app dark">
+      <%= yield %>
+  </section>
 </body>
 </html>
