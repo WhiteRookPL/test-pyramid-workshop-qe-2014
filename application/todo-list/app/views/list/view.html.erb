@@ -2,31 +2,27 @@
 <ul class="task-list">
 <% @list.tasks.each do |task| %>
   <li class="task-list__task cf">
+    <input type="checkbox"
+           class="task-state transition pressable"
+           data-task-id="<%= task.id %>"
+           data-list-id="<%= @list.id %>"
+           <% if task.closed %>checked="checked"<% end %> >
     <div class="task-list__task__info">
-        
-        <label class="topcoat-switch">
-        <input type="checkbox"
-               class="task-state topcoat-switch__input"
-               data-task-id="<%= task.id %>"
-               data-list-id="<%= @list.id %>"
-               <% if task.closed %>checked="checked"<% end %> >
-          <div class="topcoat-switch__toggle"></div>
-        </label>
-        <span><%= h(task.title) %></span>
-        <span><%= h(task.date) %></span>
+        <span class="task-list__task__info__date"><%= h(task.date) %></span>
+        <span class="task-list__task__info__title"><%= h(task.title) %></span>
     </div>
-    <input type="button" class="task-list__task__delete" data-task-id="<%= task.id %>" data-list-id="<%= @list.id %>" value="Delete" />
+    <input type="button" class="task-list__task__delete transition" data-task-id="<%= task.id %>" data-list-id="<%= @list.id %>" value="Delete" />
   </li>
 <% end %>
 </ul>
 
 
 <hr class="segment-divider" />
-<section id="new-task">
+<section id="new-task" class="control-group">
   <div>
-    <a href="/" class="topcoat-button-bar__button--large data-entry__back">Back</a>
+    <a href="/" class="topcoat-button-bar__button--large data-entry__back transition pressable">Back</a>
     <input type="text" class="topcoat-text-input data-entry__input transition" id="new-task-title" value="" placeholder="Title of the new task..." />
-    <input type="button" class="topcoat-button-bar__button--large data-entry__submit transition topcoat-button--large--cta" id="add-new-task" data-list-id="<%= @list.id %>" value="Add" />
+    <input type="button" class="topcoat-button-bar__button--large data-entry__submit transition topcoat-button--large--cta pressable" id="add-new-task" data-list-id="<%= @list.id %>" value="Add" />
   </div>
 </section>
 
@@ -58,21 +54,29 @@
         return false;
     });
 
-    $(".task-state").on("click", function (event) {
+    $(".task-state").on("mousedown", function () {
         var $this = $(this);
+        $this.one("mouseup", function(event){
+            var originalChecked = $this.prop("checked");
+            var taskContainer = $this.parents(".task-list__task");
 
-        $this.prop("disabled", true);
+            $this.prop("disabled", true);
 
-        $.ajax({
-            url: "/lists/" + $this.attr("data-list-id") + "/tasks/" + $this.attr("data-task-id") + "/toggle",
-            type: "POST",
-            success: function () {
-                $this.prop("disabled", false);
-            },
-            error: function(error) {
-                $this.prop("disabled", false);
-                console.error(error);
-            }
+            $.ajax({
+                url: "/lists/" + $this.attr("data-list-id") + "/tasks/" + $this.attr("data-task-id") + "/toggle",
+                type: "POST",
+                success: function () {
+                    $this.prop("disabled", false);
+                    taskContainer.toggleClass("task-list__task--done");
+                    $this.prop("checked", !originalChecked);
+                },
+                error: function(error) {
+                    $this.prop("disabled", false);
+                    document.write(error.responseText);
+                }
+            });
+
+            event.preventDefault();
         });
     });
 
