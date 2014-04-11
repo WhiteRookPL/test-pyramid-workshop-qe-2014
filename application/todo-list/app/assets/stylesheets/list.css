@@ -20,7 +20,7 @@
 
 .task-list {
     list-style-type: none;
-    padding: 0 3em;
+    padding: 0 1em;
 }
 
 .task-list__task {
@@ -47,6 +47,8 @@
     font-style: normal;
     font-variant: normal;
     font-weight: normal;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .task-list__task__info__date {

@@ -1,7 +1,7 @@
 <h1 class="section-title"><%= @current_user %>: "<%= h(@list.name) %>" tasks </h1>
 <ul class="task-list">
 <% @list.tasks.each do |task| %>
-  <li class="task-list__task cf">
+  <li class="task-list__task <% if task.closed %>task-list__task--done<% end %> cf">
     <input type="checkbox"
            class="task-state transition pressable"
            data-task-id="<%= task.id %>"

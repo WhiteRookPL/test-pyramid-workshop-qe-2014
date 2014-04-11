@@ -44,9 +44,10 @@ body {
   text-align: center;
 }
 
-.app.dark {
+.app {
   color: #F0F1F1;
   background: #4A4D4E;
+  min-width: 250px;
 }
 
 .app.dark a,
@@ -112,7 +113,6 @@ body {
     border-radius: 20px;
     margin: auto;
     margin-top: 1em;
-    min-width: 200px;
     width: 40%;
   }
 

@@ -1,7 +1,7 @@
 $(function() {
     "use strict";
 
-    $(".task-list__delete").on("click", function (event) {
+    $(document).on("click", ".task-list__delete", function (event) {
         var $this = $(this);
 
         $this.prop("disabled", true);
@@ -44,7 +44,7 @@ $(function() {
                     window.location.reload();
                 },
                 error: function(error) {
-                    console.error(error);
+                    document.write(error.responseText);
                 }
             });
         } else {
