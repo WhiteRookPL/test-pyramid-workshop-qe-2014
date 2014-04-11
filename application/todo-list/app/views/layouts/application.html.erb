@@ -3,18 +3,25 @@
 <head>
   <title>Todo List</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= stylesheet_link_tag "topcoat/css/topcoat-desktop-dark", "media: all", "data-turbolinks-track" => true %>  
+  <%= stylesheet_link_tag "topcoat/css/topcoat-desktop-dark", media: "all", "data-turbolinks-track" => true %>  
+  <%= stylesheet_link_tag "font-awesome", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 
 </head>
 <body >
-    <header>
-        <h1>To do</h1>
-    </header>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+        <label class="topcoat-switch">
+        <input type="checkbox"
+               class="task-state topcoat-switch__input"
+               checked="checked">
+          <div class="topcoat-switch__toggle"></div>
+        </label>
   <section class="app dark">
+        <header class="main-header">
+            <h1>To do</h1>
+        </header>
       <%= yield %>
   </section>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 </body>
 </html>

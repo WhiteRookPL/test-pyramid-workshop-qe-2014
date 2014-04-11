@@ -4,10 +4,89 @@
 */
 
 .transition {
-    -webkit-transition: all .5s;
+    -webkit-transition: all .2s;
 }
 
 .segment-divider {
     border-color: #58595A;
     margin: 1em;
+}
+
+.task-list {
+    list-style-type: none;
+    padding: 0 3em;
+}
+
+.task-list__task {
+    background: #595b5b;
+    border-radius: 10px;
+    box-shadow: inset 0 1px rgba(0,0,0,0.05);
+    border: 1px solid #333434;
+}
+
+.task-list__task__info {
+    float: left;
+    line-height: 1.5;
+}
+
+input.task-state:after,
+input.task-state:checked:after,
+.task-list__task__delete {
+    box-shadow: inset 0 1px rgba(255,255,255,0.36), inset 0 -1px rgba(0,0,0,0.36), inset 1px 0 rgba(0,0,0,0.36);
+}
+
+input.task-state {
+    position: static;
+    width: 4rem;
+    opacity: 1;
+    text-align: center;
+    background: blue;
+}
+
+input.task-state:after,
+input.task-state:checked:after,
+{
+    content: "";
+    display: block;
+    width: 4rem;
+    height:1.5rem;
+}
+
+input.task-state:after {
+    content: "Todo";
+}
+
+input.task-state:checked:after {
+    content: "Done";
+}
+
+input.task-state,
+.task-list__task__delete{
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-family: 'Source Sans', helvetica, arial, sans-serif;
+    font-weight: 600;
+    border: 0;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    margin: 0;
+    text-shadow: 0 -1px rgba(0,0,0,0.69);
+}
+
+.task-list__task__delete {
+    background: rgb(200, 75, 60); /*#ec514e;*/
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    float:right;
+    padding: 0 1em;
+}
+
+.task-list__task__delete:hover {
+    background: rgb(235, 111, 95);
+}
+
+.task-list__task__delete:active {
+    background: rgb(165, 39, 25);
+    box-shadow: inset 0 1px rgba(0,0,0,0.36), inset 0 -1px rgba(0,0,0,0.36), inset 1px 0 rgba(0,0,0,0.36);
 }

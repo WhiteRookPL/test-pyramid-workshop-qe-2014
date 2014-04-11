@@ -1,6 +1,6 @@
 <h1>Lists for <%= @current_user %></h1>
 
-<a href="/users/logout">Log out</a>
+
 
 <ul>
 <% @lists.each do |list| %>
@@ -15,7 +15,8 @@
 <hr class="segment-divider" />
 <section id="new-list">
   <div>
+  <a href="/users/logout" class="topcoat-button-bar__button--large data-entry__back">Quit</a>
     <input type="text" class="topcoat-text-input data-entry__input transition" id="new-list-name" value="" placeholder="Name of the new list..." />
-    <input type="button" class="topcoat-button-bar__button--large data-entry__submit transition" id="add-new-list" value="Add" />
+    <input type="button" class="topcoat-button-bar__button--large data-entry__submit topcoat-button--large--cta transition" id="add-new-list" value="Add" />
   </div>
 </section>
