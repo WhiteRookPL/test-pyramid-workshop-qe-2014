@@ -2,18 +2,8 @@
 
 <p>
   <form action="/users/authenticate" method="post">
-    <div>
-      <label for="username">User name:</label>
-      <input type="text" id="username" name="username" value="" autofocus />
-    </div>
-
-    <div>
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" value="" autocomplete="off" />
-    </div>
-
-    <div>
-      <input type="submit" value="Log in" />
-    </div>
+      <input class="topcoat-text-input--large signin__input" type="text" id="username" name="username" value="" placeholder="Username" autofocus />
+      <input class="topcoat-text-input--large signin__input" type="password" id="password" name="password" value="" placeholder="Password"  autocomplete="off" />
+      <input class="topcoat-button--large--cta signin__input" type="submit" value="Log on" />
   </form>
 </p>

@@ -28,7 +28,7 @@
 }
 
 .invalid {
-  outline: 1px solid red;
+  box-shadow: inset 1px 1px 6px 0 rgb(255,0,0), inset -1px -1px 6px 0 rgb(255,0,0);
 }
 
 html,body{
