@@ -61,11 +61,16 @@ class ListController < ApplicationController
         return
       end
 
-      list.tasks.build(:title => params[:title])
-      list.save!
+      if list.tasks.where(:title => params[:title]).first
+        head :conflict
+      else
+        list.tasks.build(:title => params[:title])
+        list.save!
+        head :ok
+      end
+    else
+      head :ok
     end
-
-    head :ok
   end
 
   def delete_task

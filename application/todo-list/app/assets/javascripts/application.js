@@ -17,6 +17,13 @@
 (function ($) {
     "use strict";
 
+    window.TODO = window.TODO || {};
+
+    window.TODO.notify = function(msg) {
+        $(".notice").text(msg);
+        handleNotificationVisibility(".notice");
+    };
+
     function handleNotificationVisibility(selector) {
         var $notice = $(selector);
 
@@ -25,10 +32,9 @@
         }
 
         if ($notice.text()) {
+            $notice.show();
             $(document).on("click", hideNotice.bind(null, 200));
             setTimeout(hideNotice, 2000);
-        } else {
-            $notice.hide();
         }
     }
 

@@ -44,7 +44,11 @@ $(function() {
                     window.location.reload();
                 },
                 error: function(error) {
-                    document.write(error.responseText);
+                    if(error.status === 409) {
+                        window.TODO.notify("A list with such name already exists.");
+                        $name.addClass("invalid");
+                        $this.prop("disabled", false);
+                    }
                 }
             });
         } else {
