@@ -48,6 +48,7 @@ body {
   color: #F0F1F1;
   background: #4A4D4E;
   min-width: 250px;
+  position: relative;
 }
 
 .app.dark a,
@@ -90,6 +91,18 @@ body {
 }
 .main-header nav {
   display: none;
+}
+
+.notice,
+.alert {
+  background: rgba(0,0,0,0.8);
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 3rem;
+  left: 12%;
+  position: absolute;
+  top: 4rem;
+  width: 76%;
 }
 
 @media screen and (min-width: 650px) {
