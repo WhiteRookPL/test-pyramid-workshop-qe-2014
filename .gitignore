@@ -1,1 +1,8 @@
+# Generated HTML from Markdown files.
 notes/*.html
+
+# Node.js modules.
+presentation/node_modules/
+
+# Unnecessary log files.
+*.log
