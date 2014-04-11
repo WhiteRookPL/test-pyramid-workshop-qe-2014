@@ -4,8 +4,6 @@
   <title>Todo List</title>
   <%= stylesheet_link_tag "topcoat/css/topcoat-desktop-dark", media: "all", "data-turbolinks-track" => true %>  
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-
 </head>
 <body>
   <section class="app dark">
@@ -16,5 +14,6 @@
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
   </section>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 </body>
 </html>
