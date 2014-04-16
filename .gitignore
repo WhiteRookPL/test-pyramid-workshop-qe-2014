@@ -6,3 +6,5 @@ presentation/node_modules/
 
 # Unnecessary files.
 *.log
+*~
+*.bak
