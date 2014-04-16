@@ -1,1 +1,1 @@
-cucumber features -t @BDD_2
+cucumber features -t ~@skip
