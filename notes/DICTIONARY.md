@@ -1,0 +1,1 @@
+# Słowniczek Języka Domenowego

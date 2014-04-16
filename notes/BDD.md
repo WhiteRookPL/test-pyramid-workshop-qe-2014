@@ -76,7 +76,7 @@ Po drugie, duże korzyści płyną również dla pracy z punktu widzenia develop
 Można z pomocą BDD zadawać sobie pytanie: _"Co jest najważniejszą z kolei rzeczą, której ten system jeszcze nie robi?"_.
 
 Zadawanie sobie tego typu pytań pozwala na odkrycie wartości biznesowej funkcjonalności do zaimplementowania i nadania
-im na tej podstawie priorytetu. 
+im na tej podstawie priorytetu.
 Udzielając odpowiedzi na te pytania tak naprawdę formułuje się przypadki testowe w dialekcie BDD:
 _"System powinien robić..."_.
 
@@ -192,7 +192,7 @@ scenariuszy w ramach konwersacji powodują rozszerzanie się kontekstu projektu 
 
 **Działające oprogramowanie**
 
-BDD powinno ułatwiać tworzenie oprogramowania. Należy zachować umiar i rozsądek przy 
+BDD powinno ułatwiać tworzenie oprogramowania. Należy zachować umiar i rozsądek przy
 doborze narzędzi i platform. Mają stanowić one podporę dla zespołu- a nie potwora spaghetti, którego trzeba wlec za sobą.
 
 **Współpraca z klientem** i **Reagowanie na zmiany**
@@ -201,3 +201,16 @@ Scenariusz w BDD stanowi *pomysł*, nie jest *obietnicą* czy *zobowiązaniem*.
 (Miejsce na zobowiązania jest gdzie indziej.)
 W dowolnej chwili realizacji projektu zestaw scenariuszy testowych powinien odwierciedlać stan systemu, zarówno w
 kontekście etapu jego realizacji (strona developerska) jak i wizji (strona biznesowa).
+
+**Różne typy BDD**
+
+- *Story BDD* to opis funkcjonalności i logiki biznesowej z punktu widzenia dostarczonej wartości dla klienta. To właśnie jeden ze sposobów opisu szczegółów technicznych w języku domenowym, zrozumiałym nawet dla nietechnicznego klienta. Poniżej znajdują się także formaty zapisu historii użytkownika, które mogą zostać odzwierciedlone w *Story BDD*:
+  - *Connextra*, czyli zapis: "AS A ...<kto>... I WANT ...<wykonać cel>... SO THAT ...<osiągnąć korzyść>...".
+  - *Feature Injection*: "IN ORDER TO ...<osiągnąć korzyść>... AS A ...<kto>... I WANT ...<czynność / cel>..."
+  - *Five Ws*, to zapis 5 liter *W*: "AS <who> <when> <where>, I <what> because <why>".
+  - *Given/When/Then* - najpopularniejszy format jeśli chodzi o użycie, wykorzystywany bezpośrednio do opisu testów i kryteriów akceptacji.
+    - *Given* opisuje warunki początkowe niezbędne do przeprowadzenia czynności.
+    - *When* opisuje wykonywane czynności składające się na opisywaną funkcjonalność.
+    - *Then* opisuje sposób weryfikacji wykonanej operacji i weryfikację wymagań.
+
+- *Spec BDD* to niskopoziomowy opis implementacji konkretnego fragmentu. Można więc powiedzieć, że ten typ testów zastępuje niejako TDD (często jest nazywany *TDD 2.0*).

@@ -1,0 +1,3 @@
+# Język Domenowy
+
+Tzw. "Ubiquitous Language" czyli wszędobylski język domenowy to jedna z form komunikacji z klientem / ekspertem domenowym. Zaprojektowana forma komunikacji powinna odzwierciedlać relacje, procesy i pojęcia znajdujące się w centrum logiki biznesowej. Powinna również opisywać je w sposób jasny i jednoznaczny. Tak przygotowany język odgrywa kluczową rolę w komunikacji, zwłaszcza gdy domena jest rozległa i rozwija się w trakcie budowania produktu. Dzięki nieustannemu rozwojowi, uzyskujemy jasną i czytelną formę komunikacji, która najprostszy i najczytelniejszy sposób komunikuje intencję oraz działania zachodzące w domenie. Rolą zespołu jest dbać o język, wyjaśniać pojęcia i dbać o ich jednoznaczność oraz dokumentować go w raz z rozwojem projektu.

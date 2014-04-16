@@ -38,7 +38,7 @@ Oczekiwania:
 
 - [x] Użytkownik ma nazwę i hasło.
   - [x] Nazwa użytkownika jest nazwą konta.
-  - [x] Użytkownik może się zalogować na własne konto.
+  - [x] Użytkownik może się zalogować na własne konto. (Zadanie 1)
   - [x] Listy należą do użytkownika.
   - [x] Użytkownik może mieć wiele list.
 - [x] Listy można tworzyć.
@@ -48,8 +48,8 @@ Oczekiwania:
   - [x] Do listy może należeć wiele elementów.
 - [x] Elementy można tworzyć.
   - [x] Element ma nazwę, datę i stan (zrobione/nie zrobione).
-- [x] Lista jest zamknięta kiedy wszystkie jej elementy są zrobione.
-- [x] Lista zamknięta jest niedostępna dla użytkownika.
+- [x] Lista zamknięta jest niedostępna dla użytkownika. (Zadanie 2)
+- [x] Lista jest zamknięta kiedy wszystkie jej elementy są zrobione. (Zadanie 3)
 
 ### Twist
 

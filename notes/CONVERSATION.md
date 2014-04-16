@@ -1,0 +1,1 @@
+# Skrypt do rozmowy z Product Ownerem

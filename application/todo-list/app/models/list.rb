@@ -25,6 +25,10 @@ class List < ActiveRecord::Base
     self.available = true
   end
 
+  def close_list!()
+    self.available = false
+  end
+
   def reopen!()
     self.tasks.each do |task|
       task.open!
