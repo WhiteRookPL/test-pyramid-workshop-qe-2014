@@ -24,7 +24,6 @@
 
 ## TODAY
 
-*TODO* Testy Automatyczne - 3 testy
 *TODO* Tagi dla BDD, TDD, GUI (3x 3 zadania)
 *TODO* BAT do poruszania się po tagach
 
@@ -34,6 +33,7 @@
 
 # Finished
 
+*DONE* Testy Automatyczne - 3 testy
 *DONE* Skrypt do dyskusji (Moderacja, Krystalizacja, dążymy do celu, pamiętamy o języku domenowym)
 *DONE* Słowniczek - Język domenowy
 *DONE* Rola QA w Agile (każdy jest dba o jakość, nie ma jednoznacznej roli w zespole)
