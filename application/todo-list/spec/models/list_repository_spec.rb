@@ -4,20 +4,18 @@ describe ListRepository do
   before(:each) do
     @repository = ListRepository.new
 
-    opened = List.create(:name => "Opened List")
-    closed = List.create(:name => "Closed List")
-    closed.close_list!
-
-    @repository.add(opened)
-    @repository.add(closed)
+    # TODO: Wypełnij poprawnie repozytorium, aby test poprawnie przechodził.
   end
+
+  # Zadanie UT_2.
+  #
+  # "Lista zamknięta jest niedostępna dla użytkownika."
+  #
+  # Wypełnij poprawnie inicjalizację testów, tak aby spełnić
+  # wymagania poniższego testu.
 
   it "not available lists should not be retrieved from repository" do
     expect(@repository.all.count).to eq(1)
     expect(@repository.all.first.name).to eq("Opened List")
-  end
-
-  after(:each) do
-    @repository = nil
   end
 end
