@@ -16,7 +16,7 @@ class Task < ActiveRecord::Base
     self.closed = true
   end
 
-  # def open!()
-  #   self.closed = false
-  # end
+  def open!()
+    self.closed = false
+  end
 end

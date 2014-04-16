@@ -4,7 +4,7 @@
 
 <ul class="task-list">
   <% @lists.each do |list| %>
-    <% if list.available == true %>
+    <% if list.available == true %> <%# REMOVE %>
       <li class="task-list__task task-list__task--highlightable cf transition">
         <a href="/lists/<%= list.id %>" class="task-list__info">
           <span class="task-list__task__info__date">
@@ -13,7 +13,7 @@
             <%= h(list.name) %></span>
         </a>
         <input type="button" class="task-list__delete pressable transition" data-list-id="<%= list.id %>" value="Delete" /></li>
-    <% end %>
+    <% end %> <%# REMOVE %>
   <% end %>
 </ul>
 
