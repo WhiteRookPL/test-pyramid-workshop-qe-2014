@@ -10,7 +10,7 @@ class LoginPage < BasePage
         '#username'
 
       when 'password field'
-        '#password'
+        '#pasword'
 
       when 'log in button'
         '#login'
