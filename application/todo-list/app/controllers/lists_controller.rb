@@ -14,8 +14,7 @@ class ListsController < ApplicationController
 
   def index
     if checkAuthentication()
-      # @lists = List.all.select { |list| list.user.username == current_user }
-      @lists = List.all.select { |list| list.available && list.user.username == current_user }
+      @lists = List.all.select { |list| list.user.username == current_user }
       @current_user = current_user
     end
   end

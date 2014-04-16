@@ -24,4 +24,13 @@ class List < ActiveRecord::Base
   def make_available!()
     self.available = true
   end
+
+  def reopen!()
+    self.tasks.each do |task|
+      task.open!
+      task.save!
+    end
+
+    self.save!
+  end
 end

@@ -84,23 +84,23 @@
         return false;
     });
 
-    // $("#reopen-list").on("click", function (event) {
-    //     var $this = $(this);
+    $("#reopen-list").on("click", function (event) {
+        var $this = $(this);
 
-    //     $this.prop("disabled", true);
+        $this.prop("disabled", true);
 
-    //     $.ajax({
-    //         url: "/lists/" + $this.attr("data-list-id") + "/reopen",
-    //         type: "POST",
-    //         success: function () {
-    //             window.location.reload();
-    //         },
-    //         error: function(error) {
-    //             console.error(error);
-    //         }
-    //     });
+        $.ajax({
+            url: "/lists/" + $this.attr("data-list-id") + "/reopen",
+            type: "POST",
+            success: function () {
+                window.location.reload();
+            },
+            error: function(error) {
+                console.error(error);
+            }
+        });
 
-    //     event.preventDefault();
-    //     return false;
-    // });
+        event.preventDefault();
+        return false;
+    });
 }(window.jQuery));
