@@ -1,102 +1,3 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
-
-.transition,
-.transition:before {
-    -webkit-transition: all .2s;
-}
-
-.pressable:active,
-.pressable:active:before {
-    padding-top: 1px;
-}
-
-.segment-divider {
-    border-color: #58595A;
-    margin: 1em;
-}
-
-.task-list {
-    list-style-type: none;
-    padding: 0 1em;
-}
-
-.task-list__task {
-    background: rgb(109, 111, 111);
-    border-radius: 10px;
-    box-shadow: inset 0 1px rgba(0,0,0,0.05);
-    border: 1px solid #333434;
-    height: 1.5rem;
-    margin-bottom: .7rem;
-    position: relative;
-}
-
-.task-list__task--done {
-    background: rgb(115, 150, 110);
-}
-
-.task-list__info,
-.task-list__task__info {
-    float: left;
-    line-height: 1.5rem;
-    margin-left: .5rem;
-    font-family: 'Source Sans', helvetica, arial, sans-serif;
-    font-size: small;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: normal;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.task-list__task__info__date {
-    color: rgb(40,40,40);
-    font-size: x-small;
-    font-weight: bold;
-}
-
-.task-list__task__info__title {
-    margin-left: .5rem;
-    line-height: 1.5rem;
-}
-
-input.task-state,
-.task-list__delete,
-.task-list__task__delete {
-    cursor: pointer;
-    font-size: 0.875rem;
-    font-family: 'Source Sans', helvetica, arial, sans-serif;
-    font-weight: 600;
-    border: 0;
-    height: 1.5rem;
-    line-height: 1.5rem;
-    margin: 0;
-    text-shadow: 0 -1px rgba(0,0,0,0.69);
-}
-
-.task-list__delete,
-.task-list__task__delete {
-    box-shadow: inset 0 1px rgba(255,255,255,0.36), inset 0 -1px rgba(0,0,0,0.36), inset 1px 0 rgba(0,0,0,0.36);
-    background: rgb(200, 75, 60);
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    color: white;
-    float:right;
-    padding: 0 1em;
-}
-.task-list__delete:hover,
-.task-list__task__delete:hover {
-    background: rgb(225, 101, 85);
-}
-
-.task-list__delete:active,
-.task-list__task__delete:active {
-    background: rgb(165, 39, 25);
-    box-shadow: inset 0 1px rgba(0,0,0,0.36);
-}
-
 input.task-state {
     float: left;
     border-top-left-radius: 10px;
@@ -119,7 +20,7 @@ input.task-state:checked:before {
 
 input.task-state:before {
     background: rgb(89, 91, 91);
-    color: rgb(198, 200, 200);
+    color: rgb(240, 241, 241);
     content: "Todo";
 }
 

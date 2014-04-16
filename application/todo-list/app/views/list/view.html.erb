@@ -16,13 +16,12 @@
 <% end %>
 </ul>
 
-
 <hr class="segment-divider" />
 <section id="new-task" class="control-group">
   <div>
-    <a href="/" class="topcoat-button-bar__button--large data-entry__back transition pressable">Back</a>
+    <a href="/" id="back" class="topcoat-button-bar__button--large data-entry__back control-group__action transition pressable">Back</a>
     <input type="text" class="topcoat-text-input data-entry__input transition" id="new-task-title" value="" placeholder="Title of the new task..." />
-    <input type="button" class="topcoat-button-bar__button--large data-entry__submit transition topcoat-button--large--cta pressable" id="add-new-task" data-list-id="<%= @list.id %>" value="Add" />
+    <input type="button" class="topcoat-button-bar__button--large data-entry__submit control-group__action transition topcoat-button--large--cta pressable" id="add-new-task" data-list-id="<%= @list.id %>" value="Add" />
   </div>
 </section>
 

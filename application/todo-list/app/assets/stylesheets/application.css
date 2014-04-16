@@ -1,4 +1,5 @@
 /*
+ * 
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -104,6 +105,21 @@ body {
   position: absolute;
   top: 4rem;
   width: 76%;
+}
+
+.transition,
+.transition:before {
+    -webkit-transition: all .2s;
+}
+
+.pressable:active,
+.pressable:active:before {
+    padding-top: 1px;
+}
+
+.segment-divider {
+    border-color: #58595A;
+    margin: 1em;
 }
 
 @media screen and (min-width: 650px) {
