@@ -13,3 +13,4 @@
 13. `rake bower:install`
 14. `rails generate rspec:install`
 15. `rake spec`
+16. `rails server`
