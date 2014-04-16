@@ -123,10 +123,21 @@ body {
   position: absolute;
   top: -20px;
   right: -20px;
-}
 
+}
 .reveal #delays {
   margin-left: 14%;
+}
+
+.reveal .stick {
+  position: absolute;
+  top: 60px;
+  right: 120px;
+  background-color: white;
+}
+
+.reveal .text_width {
+  width: 600px;
 }
 
 .reveal #delays table th {
