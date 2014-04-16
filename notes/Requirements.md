@@ -51,6 +51,39 @@ Oczekiwania:
 - [x] Lista jest zamknięta kiedy wszystkie jej elementy są zrobione.
 - [x] Lista zamknięta jest niedostępna dla użytkownika.
 
+- moderowana dyskusja na temat wymagań
+ - dyskusja ma prowadzić do krystalizacji powyższej listy
+ - obydwie strony mają dążyć do tego celu
+ - zwracanie uwagi na język domenowy
+ - *TODO* przygotować słowniczek języka domenowego
+
+### User story
+@Narrya, potrzebne są user story do każdego wymagania (nie wiemy jak ma być granulacja)
+
+- 1 user story wypełnione w 100%, na "rozbieg"
+- 1 user story jako template (wypełnij luki)
+- 1 user story do wymyślenia od zera
+- 1-2 dla nas na kickoff, z resztą sobei poradzimy
+
+### BDD
+- analogiczine jak powyżej
+  - wypełnij luki === znajdź i popraw błędy w template
+
+### TDD
+- zrobione w większości
+- do przesiania / dopisania
+  - musimy mieć pokryte wszystkie BDDki wybrane do zadań (nie może zaistnieć sytuacja, że jesteśmy 'na lodzie' na szkoleniu)
+
+### GUI
+*TODO*
+
+### Misc
+- tagi na repo dla BDD
+  - 1 tag per zadanie
+    - jak zadanie ci nie idzie, przełączasz się na inne i masz odp albo resetujesz sobie workspace
+  - *TODO* baty do poruszania się po tagach
+  - *TODO* wombat do uruchamiania testów (abstrakcja CLI)
+
 ### Twist
 
 - [x] Można mieć dostęp do zamkniętych list.

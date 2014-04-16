@@ -1,4 +1,54 @@
 # Presentation
+- rola QA w agile
+  - QA to nie tylko tester
+  - każdy z członków zesp dba o jakość (pisanie testów, poprawianie buildów?)
+- slajd o UCD
+   - wprowadzenie
+     - dlaczego akurat ten kontekst wybrano
+     - są inne podejścia takie jak np. API-centric, Data-centric ale je olewamy
+- co to są persony
+
+- zbieranie wymagań
+  - język domenowy
+
+- podział testowania systemu
+  - testy z zewnątrz
+  - testy od wewnątrz
+
+- BDD
+  - story BDD -> AS a User I WANT TO
+  - spec BDD  -> GIVEN/WHEN/THEN
+  - 2 sposoby zapisu tego samego
+
+- TDD
+  - coto, pocoto
+- Podsumowanie
+  - Jakie korzyści płyną z automatyzacji
+  - Kiedy jakie testy stosować
+
+- GUI 
+  - pejcz obdżekt
+  - selektory
+    - css: omówić szczegółowo
+    - xpath: wspomnieć
+
+- Spec by example
+  - fitnesse
+  - definition
+  - brief description - executable specification
+  - presented after the rest of topics so that we can expect the attendants to have some knowledge
+
+- Podsumowanie
+  - Jakie role pełnią testy
+    - safety harness (regresje i zabezpieczenie przy refactoringu)
+    - eksploracja bibliotek
+    - konkretyzacja domeny
+    - testy czarnoskrzynkowe (e2e, integr) vs białoskrzynkowe (BDD, TDD)
+      - czarnoskrz wiedzą co system robi
+      - białoskrz wiedzą jak system to robi
+
+- Twist
+  - zobaczmy jakie mogą zaistnieć problemy podczas utrzymania siatki testów
 
 ## Requirements
 
