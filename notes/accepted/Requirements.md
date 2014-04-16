@@ -50,3 +50,9 @@ Oczekiwania:
   - [x] Element ma nazwę, datę i stan (zrobione/nie zrobione).
 - [x] Lista jest zamknięta kiedy wszystkie jej elementy są zrobione.
 - [x] Lista zamknięta jest niedostępna dla użytkownika.
+
+### Twist
+
+- [x] Można mieć dostęp do zamkniętych list.
+- [x] Zamknięta lista może zostać ponownie otwarta.
+  - Idea cyklicznych list z zakupami, tzw. lista ponownie otwarta.
