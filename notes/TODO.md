@@ -1,4 +1,5 @@
 # Presentation
+
 - rola QA w agile
   - QA to nie tylko tester
   - każdy z członków zesp dba o jakość (pisanie testów, poprawianie buildów?)
@@ -26,7 +27,7 @@
   - Jakie korzyści płyną z automatyzacji
   - Kiedy jakie testy stosować
 
-- GUI 
+- GUI
   - pejcz obdżekt
   - selektory
     - css: omówić szczegółowo
@@ -50,25 +51,41 @@
 - Twist
   - zobaczmy jakie mogą zaistnieć problemy podczas utrzymania siatki testów
 
-## Requirements
+- moderowana dyskusja na temat wymagań
+ - dyskusja ma prowadzić do krystalizacji powyższej listy
+ - obydwie strony mają dążyć do tego celu
+ - zwracanie uwagi na język domenowy
+ - *TODO* przygotować słowniczek języka domenowego
 
-*Must:*
-- Short, concise and with only bare minimum for spreading the knowledge.
-- Should define each level of pyramid of tests.
-- Should define concepts of gathering requirements, user stories.
-- Should define responsibilities for each level of tests and integration between them.
+### User story
+@Narrya, potrzebne są user story do każdego wymagania (nie wiemy jak ma być granulacja)
 
-*Should:*
-- It should have interactive samples, diagrams.
-- Less text, more interactivity.
+- 1 user story wypełnione w 100%, na "rozbieg"
+- 1 user story jako template (wypełnij luki)
+- 1 user story do wymyślenia od zera
+- 1-2 dla nas na kickoff, z resztą sobei poradzimy
 
-*Nice-to-have:*
-- Nice and "catchy" look.
+### BDD
+- analogiczine jak powyżej
+  - wypełnij luki === znajdź i popraw błędy w template
 
-## Opinions
+### TDD
+- zrobione w większości
+- do przesiania / dopisania
+  - musimy mieć pokryte wszystkie BDDki wybrane do zadań (nie może zaistnieć sytuacja, że jesteśmy 'na lodzie' na szkoleniu)
 
-@elkorn said:
-> As to the presentation - my proposition is to use reveal.js.
-We could try to incorporate the master-slave functionality (where the clients automatically follow the slides on the presenter's machine)- this should be discussed.
+### GUI
+*TODO*
 
-> As to interactivity- we have to define what is being understood by that. Will the user manipulate the diagrams somehow?
+### Misc
+- tagi na repo dla BDD
+  - 1 tag per zadanie
+    - jak zadanie ci nie idzie, przełączasz się na inne i masz odp albo resetujesz sobie workspace
+  - *TODO* baty do poruszania się po tagach
+  - *TODO* wombat do uruchamiania testów (abstrakcja CLI)
+
+### Twist
+
+- [x] Można mieć dostęp do zamkniętych list.
+- [x] Zamknięta lista może zostać ponownie otwarta.
+  - Idea cyklicznych list z zakupami, tzw. lista ponownie otwarta.

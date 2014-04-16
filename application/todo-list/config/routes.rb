@@ -11,7 +11,7 @@ TodoList::Application.routes.draw do
   put 'lists/:id/tasks/new/:title', to: 'list#new_task'
 
   post 'lists/:id/tasks/:taskId/toggle', to: "list#toggle_task"
-  # post 'lists/:id/reopen', to: "list#reopen_list"
+  post 'lists/:id/reopen', to: "list#reopen_list"
 
   get 'users/login'
   get 'users/logout'

@@ -88,3 +88,7 @@ end
 Then(/^"([^"]+)" has (\d+) tasks? inside$/) do |listName, tasksNumber|
   List.where(:name => listName).first.tasks.count.should == tasksNumber.to_i
 end
+
+Then(/^"([^"]+)" should be in repository$/) do |listName|
+  List.where(:name => listName).count == 1
+end

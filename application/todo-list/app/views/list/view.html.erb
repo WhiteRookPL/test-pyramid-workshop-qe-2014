@@ -22,9 +22,6 @@
     <a href="/" id="back" class="topcoat-button-bar__button--large data-entry__back control-group__action transition pressable">Back</a>
     <input type="text" class="topcoat-text-input data-entry__input transition" id="new-task-title" value="" placeholder="Title of the new task..." />
     <input type="button" class="topcoat-button-bar__button--large data-entry__submit control-group__action transition topcoat-button--large--cta pressable" id="add-new-task" data-list-id="<%= @list.id %>" value="Add" />
+    <input type="button" class="hidden topcoat-button-bar__button--large topcoat-button--large--cta pressable" id="reopen-list" data-list-id="<%= @list.id %>" value="Reopen" />
   </div>
-</section>
-
-<section class="hidden">
-  <input type="button" id="reopen-list" data-list-id="<%= @list.id %>" value="Reopen" />
 </section>

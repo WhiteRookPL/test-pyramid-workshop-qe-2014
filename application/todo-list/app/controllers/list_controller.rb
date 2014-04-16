@@ -17,11 +17,6 @@ class ListController < ApplicationController
       @list = List.where(:id => params[:id]).first
       @current_user = current_user
 
-      if !@list.available
-        redirect_to '/'
-        return
-      end
-
       if @list.user.username != current_user
         redirect_to '/'
         return
@@ -89,23 +84,18 @@ class ListController < ApplicationController
     head :ok
   end
 
-  # def reopen_list
-  #   if checkAuthentication()
-  #     list = List.where(:id => params[:id]).first
+  def reopen_list
+    if checkAuthentication()
+      list = List.where(:id => params[:id]).first
 
-  #     if list.user.username != current_user
-  #       redirect_to '/'
-  #       return
-  #     end
+      if list.user.username != current_user
+        redirect_to '/'
+        return
+      end
 
-  #     list.tasks.each do |task|
-  #       task.open!
-  #       task.save!
-  #     end
+      list.reopen!
+    end
 
-  #     list.save!
-  #   end
-
-  #   head :ok
-  # end
+    head :ok
+  end
 end

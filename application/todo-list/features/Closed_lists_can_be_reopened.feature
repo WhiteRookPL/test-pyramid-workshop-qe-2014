@@ -9,3 +9,4 @@ Feature: Closed list can be reopened at once
     When "Closed list" will be reopened
     Then all tasks on "Closed list" should be opened
     And "Closed list" should be available
+    And "Closed list" should be in repository
