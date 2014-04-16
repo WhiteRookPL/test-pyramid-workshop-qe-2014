@@ -22,23 +22,19 @@
 *TODO* Role Testów - Safety Harness, Regression, Exploration of Solutions and Libraries, Concretization of Domain
 *TODO* Utrzymanie testów - Problemy, Twist
 
-## TODAY
+# Verification
 
-*TODO* Tagi dla BDD, TDD, GUI (3x 3 zadania)
-*TODO* BAT do poruszania się po tagach
-
-## MAYBE
-
-*TODO* Cucumber po polsku
-
-# Finished
-
-*DONE* Testy Automatyczne - 3 testy
 *DONE* Skrypt do dyskusji (Moderacja, Krystalizacja, dążymy do celu, pamiętamy o języku domenowym)
 *DONE* Słowniczek - Język domenowy
 *DONE* Rola QA w Agile (każdy jest dba o jakość, nie ma jednoznacznej roli w zespole)
 *DONE* UCD, Persona, Inne podejścia
 *DONE* Język domenowy
-*DONE* Dopisać potrzebne testy jednostkowe (pokrycie 3 user stories 100% dla UT, BDD, GUI)
-*DONE* Story BDD
-*DONE* Spec BDD
+
+# Closed
+
+*CLOSED* Story BDD
+*CLOSED* Spec BDD
+*CLOSED* BAT do poruszania się po tagach
+*CLOSED* Tagi dla BDD, UT, GUI (3x 3 zadania)
+*CLOSED* Testy Automatyczne - 3 testy
+*CLOSED* Dopisać potrzebne testy jednostkowe (pokrycie 3 user stories 100% dla UT, BDD, GUI)
