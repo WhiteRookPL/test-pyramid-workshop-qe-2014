@@ -1,4 +1,4 @@
-pushd ../application/todo-list
+pushd ..\application\todo-list
 rake db:drop
 rake db:migrate
 rake db:seed
