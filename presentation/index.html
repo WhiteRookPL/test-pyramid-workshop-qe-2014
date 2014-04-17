@@ -329,7 +329,7 @@
 
             <div class="fragment">Informację, do czego system ma służyć</div>
             <div class="fragment">Persony, czyli informacje kim są użytkownicy</div>
-            <div class="fragment">Informację o umiejetnościach uzytkowników</div>
+            <div class="fragment">Informację o umiejętnościach użytkowników</div>
           </section>
 
           <section>
@@ -380,7 +380,7 @@
             <h2>Wymagania <small>vs</small> <em>user story</em></h2>
 
             <ul>
-              <li class="fragment">Produkt powinin być biały</li>
+              <li class="fragment">Produkt powinien być biały</li>
               <li class="fragment">Produkt powinien być podłączony do prądu</li>
               <li class="fragment">Produkt powinien opiekać z góry i z dołu</li>
             </ul>
@@ -468,7 +468,7 @@
 
           <section class="section-header">
             <p>
-              Nasz klient to bogaty, zmanierowany prezes firmy farmacetycznej, który chce robić efektywnie zakupy.
+              Nasz klient to bogaty, zmanierowany prezes firmy farmaceutycznej, który chce robić efektywnie zakupy.
             </p>
             <p class="fragment">
               Ma niestety problemy z pamięcią. Zawsze zapomina co ma kupić, lecytyna nie pomaga. Pomóc w zapamiętywaniu ma prosta aplikacja webowa.
@@ -501,7 +501,7 @@
 
             <p class="fragment">
               <strong>Jako</strong> Krystian,<br>
-              <strong>Chcę</strong> aby moje zamkniete listy nie były widoczne,<br>
+              <strong>Chcę</strong> aby moje zamknięte listy nie były widoczne,<br>
               <strong>Żeby</strong> nie wprowadzały mnie w błąd
             </p>
           </section>
@@ -557,8 +557,57 @@
             <img class="huge white-background" src="img/pyramid.png" alt="Piramida testów" />
           </section>
 
-          <section>
-            <h2>Podział testów</h2> TODO
+          <section class="section-header">
+            <h2>Podział testów</h2>
+
+            <ul>
+              <li>Testy biało-skrzynkowe</li>
+              <li>Test czarno-skrzynkowe</li>
+            </ul>
+          </section>
+
+          <section class="section-header">
+            <h2>Black Box Testing</h2>
+
+            <img src="img/black-box.jpg" width="350" alt="White Box" />
+
+            <aside class="notes">
+              <ul>
+                <li>
+                  Testy czarno-skrzynkowe są łatwe w użyciu i czytelne. Można na ich podstawie w bardzo prosty sposób stwierdzić czy aplikacja spełnia swoje zadanie. W tym kontekście nasuwa się wniosek, iż dobrze napisane testy czarno-skrzynkowe przez swoją czytelność stanowić mogą ważny element raportów na temat postępów prac dla interesariuszy biznesowych.
+                </li>
+                <li>
+                  Dzięki prostocie pomysłu testowania 'od zewnątrz', QA są w stanie w relatywnie krótkim czasie stworzyć zautomatyzowaną sieć wysokopoziomowych testów (GUI, e2e) skutecznie strzegących przed regresjami.</li>
+                <li>
+                  Należy jednak pamiętać, iż zewnętrzne warstwy aplikacji są najczęściej poddawane zmianą, na które testy czarno-skrzynkowe są niezwykle wrażliwe.
+                </li>
+                <li>
+                  Wiąże się to z ich kruchością i potrzebą utrzymywania i przede wszystkim dostosowywania do wszelkich zmian formatu danych wejściowych lub sposobu ich wprowadzania.
+                </li>
+              </ul>
+            </aside>
+          </section>
+
+          <section class="section-header">
+            <h2>White Box Testing</h2>
+
+            <img src="img/white-box.jpg" alt="White Box" />
+
+            <aside class="notes">
+              <ul>
+                <li>
+                  Testy czarno-skrzynkowe są łatwe w użyciu i czytelne. Można na ich podstawie w bardzo prosty sposób stwierdzić czy aplikacja spełnia swoje zadanie. W tym kontekście nasuwa się wniosek, iż dobrze napisane testy czarno-skrzynkowe przez swoją czytelność stanowić mogą ważny element raportów na temat postępów prac dla interesariuszy biznesowych.
+                </li>
+                <li>
+                  Dzięki prostocie pomysłu testowania 'od zewnątrz', QA są w stanie w relatywnie krótkim czasie stworzyć zautomatyzowaną sieć wysokopoziomowych testów (GUI, e2e) skutecznie strzegących przed regresjami.</li>
+                <li>
+                  Należy jednak pamiętać, iż zewnętrzne warstwy aplikacji są najczęściej poddawane zmianą, na które testy czarno-skrzynkowe są niezwykle wrażliwe.
+                </li>
+                <li>
+                  Wiąże się to z ich kruchością i potrzebą utrzymywania i przede wszystkim dostosowywania do wszelkich zmian formatu danych wejściowych lub sposobu ich wprowadzania.
+                </li>
+              </ul>
+            </aside>
           </section>
 
           <section>
@@ -592,7 +641,28 @@
           </section>
 
           <section>
-            <h2>TDD</h2> TODO
+            <h2>Unit tests</h2>
+            <h3><i>Testy jednostkowe</i></h3>
+
+            <ul>
+              <li>Testy biało-skrzynkowe</li>
+              <li>Wymaga dużej samodyscypliny</li>
+              <li><em>Unit</em> to jednostka funkcjonalna</li>
+            </ul>
+
+            <aside class="notes">
+              <ul>
+                <li>
+                  Unit Test to nie test klasy, funkcji, modułu - jednostki funkcjonalnej, grupy, przestrzeni w domenie.
+                </li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <h2>TDD</h2>
+
+            <img class="big" src="img/redgreenrefactor.png" alt="TDD Cycle" />
           </section>
 
           <section class="warning">
@@ -604,9 +674,9 @@
             <h3><i>Testy automatyczne GUI</i></h3>
 
             <ul>
-                <li>Zautomatyzowane scenariusze testowe.</li>
-                <li>Głównie testy eksploracyjne.</li>
-                <li>Nie za dobry stosunek: <strong>KOSZT / ZYSK</strong></li>
+              <li>Zautomatyzowane scenariusze testowe.</li>
+              <li>Głównie testy eksploracyjne.</li>
+              <li>Nie za dobry stosunek: <strong>KOSZT / ZYSK</strong></li>
             </ul>
 
             <aside class="notes">
@@ -619,15 +689,44 @@
           </section>
 
           <section>
-            <h2>GUI - Test Runner</h2> TODO
+            <h2>GUI - Test Runner</h2>
+
+            <img class="big" src="img/Selenium.png" alt="Selenium" />
           </section>
 
           <section>
-            <h2>GUI - Page Object</h2> TODO
+            <h2>GUI - Page Object</h2>
+
+            <ul>
+              <li>Odzwierciedlenie strony w kodzie</li>
+              <li>Relacja dziedziczenia</li>
+              <li>W klasie bazowej znajduje się ogólna implementacja</li>
+              <li>W klasie pochodnej, szczegółowa implementacje</li>
+            </ul>
           </section>
 
           <section>
-            <h2>GUI - Selektory</h2> TODO
+            <h2>GUI - Selektory</h2>
+
+            <ul>
+              <li>
+                CSS
+                <ul>
+                  <li><code>#id-kontenera</code></li>
+                  <li><code>div.z-klasą-css</code></li>
+                  <li><code>input[type='button']</code></li>
+                </ul>
+              </li>
+              <li>
+                XPath
+                <ul>
+                  <li><code>/html/body/section/ul/li/div</code></li>
+                  <li><code>/*[contains(text(), 'TEKST')]</code></li>
+                  <li><code>/..</code></li>
+                  <li><code>/preceding-sibling::input</code></li>
+                </ul>
+              </li>
+            </ul>
           </section>
 
           <section class="warning">
@@ -639,26 +738,54 @@
         <section>
 
           <section>
-            <h2>Specification By Example</h2> TODO
+            <h2>Specification By Example</h2>
+            <h3><i>Acceptance Test-Driven Development</i></h3>
+
+            <ul>
+              <li>Podejście łączące <strong>BDD</strong> i wymagania czytelne dla klienta</li>
+              <li>Wykonywalna specyfikacja uruchamiająca kod</li>
+              <li>Wiele warstw testów współgrających ze sobą</li>
+            </ul>
           </section>
 
           <section>
-            <h2>Executable Specification</h2> TODO
+            <h2>Executable Specification</h2>
             <h3>Fitnesse</h3>
+
+            <img src="img/Fitnesse.gif" alt="Fitnesse" />
           </section>
 
           <section class="good">
             <h2>Korzyści płynące z automatyzacji</h2>
-              <ul>
-                <li class="fragment">Agile stawia na automatyzację.</li>
-                <li class="fragment">Możliwość przetestowania wielu zestawów danych.</li>
-                <li class="fragment">Minimalizacja żmudnej pracy.</li>
-                <li class="fragment">Szybka informacja zwrotna (<strong>GO / NOT GO</strong>).</li>
-              </ul>
+
+            <ul>
+              <li class="fragment">Agile stawia na automatyzację.</li>
+              <li class="fragment">Możliwość przetestowania wielu zestawów danych.</li>
+              <li class="fragment">Minimalizacja żmudnej pracy.</li>
+              <li class="fragment">Szybka informacja zwrotna (<strong>GO / NOT GO</strong>).</li>
+            </ul>
           </section>
 
           <section>
-            <h2>Utrzymanie testów</h2> TODO
+            <h2>Utrzymanie testów</h2>
+
+            <ul>
+              <li>Testy czarno-skrzynkowe się łatwo pisze ...</li>
+              <li class="fragment"><em>... i ciężko utrzymuje.</em></li>
+              <li>Testy biało-skrzynkowe pisze się gorzej ...</li>
+              <li class="fragment"><em>... i jeśli są źle napisane, utrzymuje się je równie źle.</em></li>
+            </ul>
+
+            <aside class="notes">
+              <ul>
+                <li>
+                  Testy to również kod produkcyjny - musimy o nie dbać.
+                </li>
+                <li>
+                  Regularne CR, Wzorce projektowe, Refactoring, Dbałość o szczegóły i spójność.
+                </li>
+              </ul>
+            </aside>
           </section>
 
           <section class="warning">
@@ -677,6 +804,26 @@
               <li>
                 <a href="http://creativecommons.org/licenses/by-nd/3.0/pl/">
                   Licencja prezentacji
+                </a>
+              </li>
+              <li>
+                <a href="http://specificationbyexample.com/">
+                  Specification by Example
+                </a>
+              </li>
+              <li>
+                <a href="http://www.fitnesse.org/">
+                  Fitnesse
+                </a>
+              </li>
+              <li>
+                <a href="http://cukes.info/">
+                  Cucumber
+                </a>
+              </li>
+              <li>
+                <a href="http://jnicklas.github.io/capybara">
+                  Capybara
                 </a>
               </li>
             </ul>
