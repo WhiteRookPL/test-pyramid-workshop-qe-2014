@@ -4,5 +4,7 @@ notes/*.html
 # Node.js modules.
 presentation/node_modules/
 
-# Unnecessary log files.
+# Unnecessary files.
 *.log
+*~
+*.bak
