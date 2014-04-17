@@ -16,6 +16,10 @@ body {
   visibility: hidden !important;
 }
 
+.reveal .white-background {
+  background-color: white;
+}
+
 .reveal #sendEvents {
   font-size: 1em;
   width: 400px;
@@ -27,6 +31,18 @@ body {
   padding: 15px;
 
   color: #888888;
+}
+
+.reveal .lower {
+  margin-top: 210px;
+}
+
+.reveal .huge {
+  zoom: 3;
+}
+
+.reveal .big {
+  zoom: 1.5;
 }
 
 .reveal .list-style-none {
