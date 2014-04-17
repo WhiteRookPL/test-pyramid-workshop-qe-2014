@@ -1,20 +1,7 @@
 # Pending
 
-## Kornel
-
-*TODO* Podział testów - z zewnątrz / od wewnątrz
-*TODO* Podział Testów - White Box (BDD, TDD, Domain) / Black Box (E2E, Integration)
-*TODO* TDD, UT
-
-## Kamila
-
 *TODO* Zbieranie wymagań, Rozmowa
 *TODO* Przygotowanie gotowych User Stories i wybranie 3 do zadania (1 gotowe na rozbieg, 1 jako szablon, 1 od zera)
-*TODO* Podsumowanie - Kiedy i jakie testy stosować
-*TODO* Podsumowanie - Korzyści płynące z automatyzacji
-
-## Wojtek
-
 *TODO* GUI - Test Runner, Selenium
 *TODO* GUI - Capybara, Page Object
 *TODO* GUI - Selektory (XPath, CSS)
@@ -29,6 +16,11 @@
 *DONE* Rola QA w Agile (każdy jest dba o jakość, nie ma jednoznacznej roli w zespole)
 *DONE* UCD, Persona, Inne podejścia
 *DONE* Język domenowy
+*DONE* Podział testów - z zewnątrz / od wewnątrz
+*DONE* Podział Testów - White Box (BDD, TDD, Domain) / Black Box (E2E, Integration)
+*DONE* TDD, UT
+*DONE* Podsumowanie - Kiedy i jakie testy stosować
+*DONE* Podsumowanie - Korzyści płynące z automatyzacji
 
 # Closed
 
