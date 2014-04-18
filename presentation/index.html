@@ -564,6 +564,29 @@
               <li>Testy biało-skrzynkowe</li>
               <li>Test czarno-skrzynkowe</li>
             </ul>
+
+            <aside class="notes">
+              <ul>
+              <li><b>Whitebox</b></li>
+                <li>
+                  Metodyka ta zwraca uwagę na wszelkie szczegóły techniczne związane z procesem prowadzącym do osiągnięcia założonych wyników. 
+                </li>
+                <li>
+                  W uproszczeniu można stwierdzić, iż testy białoskrzynkowe odpowiadają na pytanie "Jak aplikacja realizuje swoje funkcjonalności?".</li>
+                <li>
+                  Pisanie tego typu testów otwiera umożliwia znacznie bardziej wyrafinowaną weryfikację zachowań systemu, ponieważ znajdują się w strefie udostępniającej pełne spektrum technicznych szczegółów.
+                </li>
+                <li>
+                  Przykładem testów białoskrzynkowych mogą być testy jednostkowe w dialekcie TDD lub BDD.
+                </li>
+                <li><b>Blackbox</b></li>
+                <li>Metodyka ta rozpatruje możliwe dane wejściowe dla aplikacji i weryfikuje otrzymane wyniki.
+                <li>Można w uproszczeniu stwierdzić, iż testy czarnoskrzynkowe odpowiadają na pytanie "Co aplikacja robi?".</li>
+                <li>Nie rozpatruje się w tym przypadku technicznych aspektów realizacji poszczególnych funkcjonalności ani procesów czy transformacji danych jakie prowadzą do osiągnięcia wyznaczonego celu.</li>
+                <li>Większość testów czarnoskrzynkowych opiera się na interakcjach z GUI lub API w przypadku serwisów.</li>
+                <li>Przykładem testu czarnoskrzynkowego może być test end to end funkcjonalności aplikacji, która polega na przesłaniu wiadomości od jednego użytkownika do drugiego.</li>
+              </ul>
+            </aside>
           </section>
 
           <section class="section-header">
@@ -579,13 +602,31 @@
                 <li>
                   Dzięki prostocie pomysłu testowania 'od zewnątrz', QA są w stanie w relatywnie krótkim czasie stworzyć zautomatyzowaną sieć wysokopoziomowych testów (GUI, e2e) skutecznie strzegących przed regresjami.</li>
                 <li>
-                  Należy jednak pamiętać, iż zewnętrzne warstwy aplikacji są najczęściej poddawane zmianą, na które testy czarno-skrzynkowe są niezwykle wrażliwe.
+                  Należy jednak pamiętać, iż zewnętrzne warstwy aplikacji są najczęściej poddawane zmianom, na które testy czarno-skrzynkowe są niezwykle wrażliwe.
                 </li>
                 <li>
                   Wiąże się to z ich kruchością i potrzebą utrzymywania i przede wszystkim dostosowywania do wszelkich zmian formatu danych wejściowych lub sposobu ich wprowadzania.
                 </li>
               </ul>
             </aside>
+          </section>
+
+          <section>
+            <h2>BBT - przykład</h2>
+              <p>Test end to end funkcjonalności aplikacji: przesłanie wiadomości od jednego użytkownika do drugiego.</p>
+              <ul>
+                <li class="fragment">Loguję się jako użytkownik X.</li>
+                <li class="fragment">Naciskam przycisk "wyślij wiadomość".</li>
+                <li class="fragment">Wybieram z menu rozwijanego użytkownika Y.</li>
+                <li class="fragment">Wpisuję treść wiadomości.</li>
+                <li class="fragment">Naciskam przycisk "wyślij".</li>
+                <li class="fragment">Wylogowuję się.</li>
+                <li class="fragment">Loguję się jako użytkownik Y.</li>
+                <li class="fragment">Naciskam na przycisk "Nowe wiadomości".</li>
+                <li class="fragment">W liście wiadomości znajduje się nowa wiadomość od użytkownika X.</li>
+                <li class="fragment">Naciskam na najnowszą wiadomość.</li>
+                <li class="fragment">Wiadomość zawiera treść, którą wysłał użytkownik X.</li>
+              </ul>
           </section>
 
           <section class="section-header">
@@ -595,21 +636,32 @@
 
             <aside class="notes">
               <ul>
-                <li>
-                  Testy czarno-skrzynkowe są łatwe w użyciu i czytelne. Można na ich podstawie w bardzo prosty sposób stwierdzić czy aplikacja spełnia swoje zadanie. W tym kontekście nasuwa się wniosek, iż dobrze napisane testy czarno-skrzynkowe przez swoją czytelność stanowić mogą ważny element raportów na temat postępów prac dla interesariuszy biznesowych.
-                </li>
-                <li>
-                  Dzięki prostocie pomysłu testowania 'od zewnątrz', QA są w stanie w relatywnie krótkim czasie stworzyć zautomatyzowaną sieć wysokopoziomowych testów (GUI, e2e) skutecznie strzegących przed regresjami.</li>
-                <li>
-                  Należy jednak pamiętać, iż zewnętrzne warstwy aplikacji są najczęściej poddawane zmianą, na które testy czarno-skrzynkowe są niezwykle wrażliwe.
-                </li>
-                <li>
-                  Wiąże się to z ich kruchością i potrzebą utrzymywania i przede wszystkim dostosowywania do wszelkich zmian formatu danych wejściowych lub sposobu ich wprowadzania.
-                </li>
+                <li>Niezaprzeczalnie najwększymi zaletami testów białoskrzynkowych jest ich głęboki wgląd w domenę aplikacji oraz gruntowność w pokryciu przypadków brzegowych. Dodatkowym plusem jest ich stabilność, która stanowi odzwierciedlenie stabilności kodu domenowego aplikacji.</li>
+                <li>Dokładność i informatywnosć testów białoskrzynkowych czyni je idealnym źródłem wiedzy dla developerów.
+              Jeżeli team developerski przejmuje od kogoś projekt, zyskuje dużą dawkę pewności i swobody w jego rozwoju jeżeli ma do dyspozycji solidną sieć testów białoskrzynkoych.
+              Oznacza to dla nich skrócony czas wdrażania się w technikalia oraz zapewnienie, że zostaną poinformowani gdy ich zmiany naruszą utrzymanie niezmienników kluczowych dla domeny systemu.
+              </li>
+
+              <li>
+                Testy 'od wewnątrz' oczywiście również wymagają utrzymywania - zmiany staja się potrzebne w przypadku modyfikacji zachowań związanych z logiką biznesową.
+Dodatkową ich wadą jest bardzo ścisłe powiązanie z testowanym kodem, niezbędne do osiągnięcia pełnego potencjału wglądu w jego domenę. Wiąże się to z potrzebą postawienia całej aplikacji na odpowiedniej platformie, wraz ze wszystkimi niezbędnymi narzędziami po to by móc uruchomić przygotowany dla niej zestaw testów białoskrzynkowych.
+              </li>
+
+
               </ul>
             </aside>
           </section>
-
+  <section>
+    <h2>WBT - przykład</h2>
+    <ul>
+      <li class="fragment">Załóżmy istnienie obiektów `acc1` i `acc2` typu `BankAccount`.</li>
+      <li class="fragment">Inicjalizuję obiekt `acc1 = BankAccount.withBalance(200)`.</li>
+      <li class="fragment">Inicjalizuję obiekt `acc2 = BankAccount.withBalance(10)`.</li>
+      <li class="fragment">Dokonuję wywołania `acc1.transfer(acc2, 50)`.</li>
+      <li class="fragment">Oczekuję, iż `acc2.balance() == 60`.</li>
+      <li class="fragment">Oczekuję, iż `acc1.balance() == 150`.</li>
+    </ul>
+  </section>
           <section>
             <h2>Acceptance tests</h2>
             <h3><i>Testy akceptacyjne</i></h3>
@@ -731,9 +783,16 @@ THEN ... weryfikacja</code></pre>
 
             <aside class="notes">
               <ul>
-                <li>
-                  Unit Test to nie test klasy, funkcji, modułu - jednostki funkcjonalnej, grupy, przestrzeni w domenie.
-                </li>
+                <li>Unit Test to nie test klasy, funkcji, modułu - jednostki funkcjonalnej, grupy, przestrzeni w domenie.</li>
+                <li>Zapewnia utrzymanie niezmienników w kodzie - wszystko musi zawsze działać!</li>
+                <li>Utrzymuje kod prostym i o dobrej strukturze.</li>
+                <li>Kod łatwo testowalny wspiera luźne powiązanie komponentów.</li>
+                <li>Testy jednostkowe zapobiegają degradacji struktury kodu, każde odejście od dobrych praktyk sprawia trudność w testowaniu.</li>
+                <li>Testy jednostkowe dokumentują kod, stanowiąc przykłady jego użycia.</li>
+                <li>Drobna granulacja testów pozwala na szybkie wprowadzanie zmian w logice.</li>
+                <li>Szybki feedback na temat efektów wywołanych przez zmiany.</li>
+                <li>Zmniejszenie obaw związanych z przeoczonymi efektami ubocznymi w odległych częściach aplikacji.</li>
+                <li>Można dokonywać refaktoryzacji i eksperymentować bez ryzyka.</li>
               </ul>
             </aside>
           </section>
@@ -742,6 +801,19 @@ THEN ... weryfikacja</code></pre>
             <h2>TDD</h2>
 
             <img class="big" src="img/redgreenrefactor.png" alt="TDD Cycle" />
+            <aside class="notes">
+              <ul>
+                <li>Napisz test udowadniający istnienie błędu lub demonstrujący nowy feature.</li>
+                <li>Uruchom test, zaobserwuj jego porażkę.</li>
+                <li>Napisz minimalną ilość jak najprostszego kodu umożliwiającego przejście nowego testu.</li>
+                <ul>
+                  <li>Podczas uzyskiwania wiedzy na temat problemu w ramach pisania kodu możesz zmieniać test.</li>
+                </ul>
+                <li>Uruchom test ponownie by zaobserwować jego sukces.</li>
+                <li>Uruchom cały zestaw testów aby sprawdzić czy nie wprowadzono regresji.</li>
+                <li>Refaktoryzuj napisany kod.</li>
+              </ul>
+            </aside>
           </section>
 
           <section class="warning">
