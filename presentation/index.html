@@ -33,8 +33,6 @@
     <script src="js/TangleKit.js"></script>
 
     <script src="js/countdown.js"></script>
-    <script src="js/svg-mover.js"></script>
-
     <script>
       var RAD = Math.PI / 180;
 
@@ -1076,6 +1074,10 @@
                   .active {
                       fill: #7FDBFF;
                   }
+
+                  text {
+                    font-family: monospace;
+                  }
                 ]]>
               </style>
               <g>
@@ -1087,65 +1089,42 @@
                 <polygon points="10,1020 1010,1020 910,820 110,820"/>
               </g>
               <g>
-                <title>Vertical Guides</title>
-                <path d="M 510 0 L 510 1000 z" stroke="red"/>
-
-                <path d="M 410 200 L 410 1000 z" stroke="red"/>
-                <path d="M 610 200 L 610 1000 z" stroke="red"/>
-
-                <path d="M 310 400 L 310 1000 z" stroke="red"/>
-                <path d="M 710 400 L 710 1000 z" stroke="red"/>
-
-                <path d="M 210 600 L 210 1000 z" stroke="red"/>
-                <path d="M 810 600 L 810 1000 z" stroke="red"/>
-
-                <path d="M 110 800 L 110 1000 z" stroke="red"/>
-                <path d="M 910 800 L 910 1000 z" stroke="red"/>
-              </g>
-              <g>
                 <title>Text</title>
-                <text x="477" y="170"
-                      font-family="Verdana" font-size="55" fill="black" >
+                <text x="477" y="170" font-size="55" fill="black">
                   <tspan>
                     UI
                   </tspan>
                 </text>
-                <text x="390" y="335"
-                      font-family="Verdana" font-size="45" fill="black" >
+                <text x="390" y="335" font-size="45" fill="black">
                   <tspan>
                     Systemowe
                   </tspan>
                 </text>
-                <text x="365" y="475"
-                      font-family="Verdana" font-size="45" fill="black" >
+                <text x="345" y="475" font-size="45" fill="black">
                   <tspan>
                     Integracyjne
                   </tspan>
-                  <tspan dx="-312" dy="65">
+                  <tspan dx="-352" dy="65">
                     Akceptacyjne
                   </tspan>
-                  <tspan dx="-225" dy="55" font-size="35">
+                  <tspan dx="-245" dy="55" font-size="35">
                     (BDD)
                   </tspan>
                 </text>
-                <text x="350" y="690"
-                      font-family="Verdana" font-size="55" fill="black" >
+                <text x="380" y="690" font-size="55" fill="black">
                   <tspan>
                     Domenowe
                   </tspan>
-                  <tspan dx="-410" dy="65">
+                  <tspan dx="-450" dy="65">
                     Logiki biznesowej
                   </tspan>
-                  <tspan dx="-321" dy="45" font-size="35">
+                  <tspan dx="-371" dy="45" font-size="35">
                     (BDD)
                   </tspan>
                 </text>
-                <text x="255" y="900"
-                      font-family="Verdana" font-size="55" fill="black" >
-                  <tspan>
-                    Testy jednostkowe
-                  </tspan>
-                  <tspan dx="-325" dy="65">
+                <text x="335" y="900" font-size="55" fill="black">
+                  <tspan>Jednostkowe</tspan>
+                  <tspan dx="-305" dy="65">
                     (TDD)
                   </tspan>
                 </text>
@@ -1176,6 +1155,156 @@
 
         <section>
 
+          <section>
+            <h2>Acceptance tests</h2>
+
+            <svg class="scaled-down"
+                 width="1030" height="1050"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:svg="http://www.w3.org/2000/svg">
+              <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+              <style type="text/css" >
+                <![CDATA[
+                  polygon {
+                      stroke: #666;
+                      stroke-width: 4px;
+                      fill: #fff;
+                  }
+                  .active {
+                      fill: #7FDBFF;
+                  }
+
+                  text {
+                    font-family: monospace;
+                  }
+                ]]>
+              </style>
+              <g>
+                <title>Pyramid</title>
+                <polygon points="410,220 610,220 510,20" />
+                <polygon points="310,420 710,420 610,220 410,220" />
+                <polygon points="210,620 810,620 710,420 310,420" class="active" />
+                <polygon points="110,820 910,820 810,620 210,620" />
+                <polygon points="10,1020 1010,1020 910,820 110,820" />
+              </g>
+              <g>
+                <title>Text</title>
+                <text x="477" y="170" font-size="55" fill="black">
+                  <tspan>
+                    UI
+                  </tspan>
+                </text>
+                <text x="390" y="335" font-size="45" fill="black">
+                  <tspan>
+                    Systemowe
+                  </tspan>
+                </text>
+                <text x="345" y="475" font-size="45" fill="black">
+                  <tspan>
+                    Integracyjne
+                  </tspan>
+                  <tspan dx="-352" dy="65">
+                    Akceptacyjne
+                  </tspan>
+                  <tspan dx="-245" dy="55" font-size="35">
+                    (BDD)
+                  </tspan>
+                </text>
+                <text x="380" y="690" font-size="55" fill="black">
+                  <tspan>
+                    Domenowe
+                  </tspan>
+                  <tspan dx="-450" dy="65">
+                    Logiki biznesowej
+                  </tspan>
+                  <tspan dx="-371" dy="45" font-size="35">
+                    (BDD)
+                  </tspan>
+                </text>
+                <text x="335" y="900" font-size="55" fill="black">
+                  <tspan>Jednostkowe</tspan>
+                  <tspan dx="-305" dy="65">
+                    (TDD)
+                  </tspan>
+                </text>
+              </g>
+            </svg>
+          </section>
+          <section>
+            <h2>Acceptance tests</h2>
+
+            <svg class="scaled-down"
+                 width="1030" height="1050"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:svg="http://www.w3.org/2000/svg">
+              <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+              <style type="text/css" >
+                <![CDATA[
+                  polygon {
+                      stroke: #666;
+                      stroke-width: 4px;
+                      fill: #fff;
+                  }
+                  .active {
+                      fill: #7FDBFF;
+                  }
+
+                  text {
+                    font-family: monospace;
+                  }
+                ]]>
+              </style>
+              <g>
+                <title>Pyramid</title>
+                <polygon points="410,220 610,220 510,20" />
+                <polygon points="310,420 710,420 610,220 410,220" />
+                <polygon points="210,620 810,620 710,420 310,420"/>
+                <polygon points="110,820 910,820 810,620 210,620" class="active" />
+                <polygon points="10,1020 1010,1020 910,820 110,820" />
+              </g>
+              <g>
+                <title>Text</title>
+                <text x="477" y="170" font-size="55" fill="black">
+                  <tspan>
+                    UI
+                  </tspan>
+                </text>
+                <text x="390" y="335" font-size="45" fill="black">
+                  <tspan>
+                    Systemowe
+                  </tspan>
+                </text>
+                <text x="345" y="475" font-size="45" fill="black">
+                  <tspan>
+                    Integracyjne
+                  </tspan>
+                  <tspan dx="-352" dy="65">
+                    Akceptacyjne
+                  </tspan>
+                  <tspan dx="-245" dy="55" font-size="35">
+                    (BDD)
+                  </tspan>
+                </text>
+                <text x="380" y="690" font-size="55" fill="black">
+                  <tspan>
+                    Domenowe
+                  </tspan>
+                  <tspan dx="-450" dy="65">
+                    Logiki biznesowej
+                  </tspan>
+                  <tspan dx="-371" dy="45" font-size="35">
+                    (BDD)
+                  </tspan>
+                </text>
+                <text x="335" y="900" font-size="55" fill="black">
+                  <tspan>Jednostkowe</tspan>
+                  <tspan dx="-305" dy="65">
+                    (TDD)
+                  </tspan>
+                </text>
+              </g>
+            </svg>
+          </section>
           <section>
             <h2>Acceptance tests</h2>
             <h3><i>Dlaczego od środka?</i></h3>
@@ -1421,6 +1550,82 @@ THEN ... weryfikacja</code></pre>
         <section>
 
           <section>
+          <h2>Unit tests</h2>
+          <h3><i>Testy jednostkowe</i></h3>
+
+          <svg class="scaled-down"
+               width="1030" height="1050"
+               xmlns="http://www.w3.org/2000/svg"
+               xmlns:svg="http://www.w3.org/2000/svg">
+            <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+            <style type="text/css" >
+              <![CDATA[
+                polygon {
+                    stroke: #666;
+                    stroke-width: 4px;
+                    fill: #fff;
+                }
+                .active {
+                    fill: #7FDBFF;
+                }
+
+                text {
+                  font-family: monospace;
+                }
+              ]]>
+            </style>
+            <g>
+              <title>Pyramid</title>
+              <polygon points="410,220 610,220 510,20"/>
+              <polygon points="310,420 710,420 610,220 410,220"/>
+              <polygon points="210,620 810,620 710,420 310,420"/>
+              <polygon points="110,820 910,820 810,620 210,620"/>
+              <polygon points="10,1020 1010,1020 910,820 110,820" class="active"/>
+            </g>
+            <g>
+              <title>Text</title>
+              <text x="477" y="170" font-size="55" fill="black">
+                <tspan>
+                  UI
+                </tspan>
+              </text>
+              <text x="390" y="335" font-size="45" fill="black">
+                <tspan>
+                  Systemowe
+                </tspan>
+              </text>
+              <text x="345" y="475" font-size="45" fill="black">
+                <tspan>
+                  Integracyjne
+                </tspan>
+                <tspan dx="-352" dy="65">
+                  Akceptacyjne
+                </tspan>
+                <tspan dx="-245" dy="55" font-size="35">
+                  (BDD)
+                </tspan>
+              </text>
+              <text x="380" y="690" font-size="55" fill="black">
+                <tspan>
+                  Domenowe
+                </tspan>
+                <tspan dx="-450" dy="65">
+                  Logiki biznesowej
+                </tspan>
+                <tspan dx="-371" dy="45" font-size="35">
+                  (BDD)
+                </tspan>
+              </text>
+              <text x="335" y="900" font-size="55" fill="black">
+                <tspan>Jednostkowe</tspan>
+                <tspan dx="-305" dy="65">
+                  (TDD)
+                </tspan>
+              </text>
+            </g>
+          </svg>
+          </section>
+          <section>
             <h2>Unit tests</h2>
             <h3><i>Testy jednostkowe</i></h3>
 
@@ -1537,6 +1742,82 @@ THEN ... weryfikacja</code></pre>
 
         <section>
 
+          <section>
+            <h2>Automated GUI tests</h2>
+            <h3><i>Testy automatyczne GUI</i></h3>
+
+            <svg class="scaled-down"
+                 width="1030" height="1050"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:svg="http://www.w3.org/2000/svg">
+              <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+              <style type="text/css" >
+                <![CDATA[
+                  polygon {
+                      stroke: #666;
+                      stroke-width: 4px;
+                      fill: #fff;
+                  }
+                  .active {
+                      fill: #7FDBFF;
+                  }
+
+                  text {
+                    font-family: monospace;
+                  }
+                ]]>
+              </style>
+              <g>
+                <title>Pyramid</title>
+                <polygon points="410,220 610,220 510,20" class="active"/>
+                <polygon points="310,420 710,420 610,220 410,220"/>
+                <polygon points="210,620 810,620 710,420 310,420"/>
+                <polygon points="110,820 910,820 810,620 210,620"/>
+                <polygon points="10,1020 1010,1020 910,820 110,820"/>
+              </g>
+              <g>
+                <title>Text</title>
+                <text x="477" y="170" font-size="55" fill="black">
+                  <tspan>
+                    UI
+                  </tspan>
+                </text>
+                <text x="390" y="335" font-size="45" fill="black">
+                  <tspan>
+                    Systemowe
+                  </tspan>
+                </text>
+                <text x="345" y="475" font-size="45" fill="black">
+                  <tspan>
+                    Integracyjne
+                  </tspan>
+                  <tspan dx="-352" dy="65">
+                    Akceptacyjne
+                  </tspan>
+                  <tspan dx="-245" dy="55" font-size="35">
+                    (BDD)
+                  </tspan>
+                </text>
+                <text x="380" y="690" font-size="55" fill="black">
+                  <tspan>
+                    Domenowe
+                  </tspan>
+                  <tspan dx="-450" dy="65">
+                    Logiki biznesowej
+                  </tspan>
+                  <tspan dx="-371" dy="45" font-size="35">
+                    (BDD)
+                  </tspan>
+                </text>
+                <text x="335" y="900" font-size="55" fill="black">
+                  <tspan>Jednostkowe</tspan>
+                  <tspan dx="-305" dy="65">
+                    (TDD)
+                  </tspan>
+                </text>
+              </g>
+            </svg>
+          </section>
           <section>
             <h2>Automated GUI tests</h2>
             <h3><i>Testy automatyczne GUI</i></h3>
@@ -1885,6 +2166,7 @@ THEN ... weryfikacja</code></pre>
 
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.min.js"></script>
+    <script src="js/svg-mover.js"></script>
 
     <script>
       var BLUE = "#63ABF0",
