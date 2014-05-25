@@ -1,4 +1,4 @@
-Given(/^I shown "([^"]+)"$/) do |listName|
+Given(/^I opened "([^"]+)"$/) do |listName|
   @page = @page.followByName(listName)
 end
 

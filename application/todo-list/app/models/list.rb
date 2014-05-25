@@ -21,11 +21,11 @@ class List < ActiveRecord::Base
     return true
   end
 
-  def make_available!()
+  def open!()
     self.available = true
   end
 
-  def close_list!()
+  def close!()
     self.available = false
   end
 

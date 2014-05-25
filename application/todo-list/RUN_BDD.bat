@@ -1,1 +1,1 @@
-cucumber features -t ~@skip
+cucumber features -c -t ~@skip

@@ -543,3 +543,29 @@ body {
 .notes time {
   font-weight: bold;
 }
+
+.countdown {
+  color: black;
+  text-shadow: 0 0 10px #333333;
+
+  font-size: 5em !important;
+  line-height: 1em !important;
+
+  cursor: pointer;
+}
+
+.fragment.nicer-container {
+  display: none;
+}
+
+.fragment.nicer-container.visible {
+  display: initial;
+}
+
+.fragment.nicer-container.visible + .countdown {
+  display: none;
+}
+
+.nicer-container {
+  margin-top: 25px !important;
+}

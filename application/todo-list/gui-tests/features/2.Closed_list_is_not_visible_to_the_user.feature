@@ -8,7 +8,7 @@ Feature: Closed lists are not visible to the user
     And I typed "My new list" into new list field
     And I clicked add button
     And I saw "My new list"
-    And I shown "My new list"
+    And I opened "My new list"
     And I typed "My new task" into new task field
     And I clicked add button
     When I mark checkbox near "My new task"

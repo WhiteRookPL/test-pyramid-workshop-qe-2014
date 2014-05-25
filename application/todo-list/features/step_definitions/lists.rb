@@ -53,8 +53,8 @@ end
 When(/^"([^"]+)" will be opened$/) do |listName|
   list = List.where(:name => listName).first
 
-  list.make_available!
-  list.save
+  list.open!
+  list.save!
 end
 
 When(/^"([^"]+)" will be created$/) do |listName|

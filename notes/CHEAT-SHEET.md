@@ -40,7 +40,7 @@
 - Zamknięta lista - jest to grupa zadań, która posiada wszystkie elementy zamkniete.
 - Otwarta lista - jest to grupa zadań, z których przynajmniej jeden jest otwarty.
 
-# User Story
+# User Story - Rozwiązania
 
 ## ZADANIE 1 - Użytkownik może się zalogować na własne konto
 
@@ -68,21 +68,31 @@ Chcę zamknąć wszystkie elementy znajdujące się na liście,
 4. `rails generate rspec:install`
 5. `rake spec`
 6. `rails server`
-7. `run_gui_tests.bat`
-8. `run_bdd.bat`
-8. `run_ut.bat`
-8. `start.bat`
+7. `RUN_GUI_TESTS.bat`
+8. `RUN_BDD.bat`
+8. `RUN_UT.bat`
+8. `START_SERVER.bat`
 9. `RESTORE.bat`
 10 `BDD_*.bat` lub `UT_*.bat` lub `GUI_*.bat`
 11. `bundle install`
+12. `PREPARE_APPLICATION.bat`
+13. `PREPARE_GUI_TESTS.bat`
 
-# Code - Cheat Sheets
+# Assignments - Cheat Sheets
 
 ## Ruby
 
 TODO
 
+## Komendy
+
+TODO
+
 ## Capybara
+
+TODO
+
+## Cucumber
 
 TODO
 
@@ -92,18 +102,68 @@ TODO
 
 # Detailed time plan
 
-TODO
+00:00 - 00:05 -  5 - KK    - Informacja o pytaniach (w trakcie) i ankietach (w trakcie).
+00:05 - 00:30 - 25 - KK    - Wprowadzenie i pierwszy blok teorii (do opisu persony - Krystiana Kocura).
+00:30 - 01:00 - 30 - RAZEM - Opis persony, rozmowa z PO, zadanie z przygotowania User Stories.
+01:00 - 01:05 -  5 - RAZEM - PRZERWA
+01:05 - 01:35 - 30 - KC    - Język domenowy, Typy testów, Piramida Testów, Opis warstw.
+01:35 - 01:50 - 15 - WG    - Dlaczego zaczynamy od środka? Testy akceptacyjne - teoria.
+01:50 - 02:20 - 30 - RAZEM - Zadania z testów akceptacyjnych.
+02:20 - 02:25 -  5 - RAZEM - Przerwa.
+02:25 - 02:40 - 15 - WG    - Testy jednostkowe - teoria.
+02:40 - 03:10 - 30 - RAZEM - Zadania z testów jednostkowych.
+03:10 - 03:25 - 15 - WG    - Testy end to end - GUI - teoria.
+03:25 - 03:55 - 30 - RAZEM - Zadania z testów automatycznych GUI.
+03:55 - 04:00 -  5 - WG    - Podsumowanie.
 
 # Assignments - Details
 
 ## Acceptance Tests
 
+### Task 1
+
 TODO
 
+### Task 2
+
+TODO
+
+### Task 3
+
+TODO
+
+### Task 4 *
+
+TODO: Zadanie ma być do napisania od zera.
+
+### Task 5 *
+
+TODO: Zadanie ma być do napisania od zera.
+
 ## Unit Tests
+
+### Task 1
+
+TODO
+
+### Task 2
+
+TODO
+
+### Task 3
 
 TODO
 
 ## GUI Tests
+
+### Task 1
+
+TODO
+
+### Task 2
+
+TODO
+
+### Task 3
 
 TODO

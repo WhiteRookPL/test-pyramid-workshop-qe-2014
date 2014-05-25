@@ -8,7 +8,7 @@ Feature: List is closed when all tasks are closed
     And I typed "Someday it will be a closed list" into new list field
     And I clicked add button
     And I saw "Someday it will be a closed list"
-    And I shown "Someday it will be a closed list"
+    And I opened "Someday it will be a closed list"
     And I typed "My new task" into new task field
     And I clicked add button
     And I cleared new task field

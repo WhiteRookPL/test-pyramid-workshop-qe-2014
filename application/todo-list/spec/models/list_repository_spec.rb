@@ -6,7 +6,7 @@ describe ListRepository do
 
     opened = List.create(:name => "Opened List")
     closed = List.create(:name => "Closed List")
-    closed.close_list!
+    closed.close!
 
     @repository.add(opened)
     @repository.add(closed)

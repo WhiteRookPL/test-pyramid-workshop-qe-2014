@@ -1,1 +1,1 @@
-rake db:drop & rake db:migrate & rake db:seed & rake db:test:clone & pushd gui-tests & cucumber features -t ~@skip & popd
+rake db:drop & rake db:migrate & rake db:seed & rake db:test:clone & pushd gui-tests & cucumber features -c -t ~@skip & popd
