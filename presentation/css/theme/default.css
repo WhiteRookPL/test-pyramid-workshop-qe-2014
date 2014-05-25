@@ -569,3 +569,7 @@ body {
 .nicer-container {
   margin-top: 25px !important;
 }
+
+.scaled-down {
+  zoom: 0.5;
+}
