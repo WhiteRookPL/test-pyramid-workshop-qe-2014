@@ -15,7 +15,7 @@
     Non-mutating object extension.
   */
   function extend(dest, src) {
-    var result = dest;
+    var result = JSON.parse(JSON.stringify(dest));
 
     for (var prop in src) {
       if (prop in src && !(prop in dest)) {
@@ -66,6 +66,10 @@
 
     // A bit ugly but better accuracy than Math.floor(((timeSpan % day % hour % minute) / second)).
     result.seconds = Math.round(((timeSpan % day % hour % minute) / second)) % 61 - 1;
+
+    if (result.seconds < 0) {
+      result.seconds = 0;
+    }
 
     return result;
   }
@@ -125,14 +129,14 @@
     /*
       Starts the countdown - tick events are being thrown every second until the due date.
     */
-    this.start = function run() {
+    this.start = function () {
       var timeLeft = self.getTimeLeft();
 
       if (self.options.dueDate - new Date() < 1000) {
         trg.call(self, "due", timeLeft);
       } else {
         trg.call(self, "tick", timeLeft);
-        setTimeout(run, 1000);
+        setTimeout(self.start.bind(self), 1000);
       }
     };
 

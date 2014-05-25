@@ -54,7 +54,7 @@
 
     $("#add-new-task").on("click", function (event) {
         var $name = $("#new-task-title");
-        var name = $name.val();
+        var name = sanitize($name.val().trim());
         var $this = $(this);
 
         $name.removeClass("invalid");

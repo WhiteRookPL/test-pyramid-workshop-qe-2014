@@ -1,5 +1,5 @@
 /*
- * 
+ *
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -120,6 +120,19 @@ body {
 .segment-divider {
     border-color: #58595A;
     margin: 1em;
+}
+
+.section-title span {
+  display: inline-block;
+
+  vertical-align: middle;
+  margin-bottom: 5px;
+
+  max-width: 30%;
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 @media screen and (min-width: 650px) {

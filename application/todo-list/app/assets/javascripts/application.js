@@ -38,6 +38,12 @@
         }
     }
 
+    window.sanitize = function (value) {
+        value = encodeURIComponent(value);
+
+        return $("<div/>").text(value).html();
+    };
+
     $(function () {
         handleNotificationVisibility(".notice");
         handleNotificationVisibility(".alert");

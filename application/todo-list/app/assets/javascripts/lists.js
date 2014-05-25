@@ -1,7 +1,7 @@
 $(function() {
     "use strict";
 
-    $(document).on("click", ".task-list__delete", function (event) {
+    $(document).on("click", ".task-lists__list__delete", function (event) {
         var $this = $(this);
 
         $this.prop("disabled", true);
@@ -29,7 +29,7 @@ $(function() {
 
     $("#add-new-list").on("click", function (event) {
         var $name = $("#new-list-name");
-        var name = $name.val();
+        var name = sanitize($name.val().trim());
         var $this = $(this);
 
         $name.removeClass("invalid");
