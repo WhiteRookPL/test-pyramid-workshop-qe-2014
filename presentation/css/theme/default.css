@@ -570,6 +570,7 @@ body {
   margin-top: 25px !important;
 }
 
-.scaled-down {
-  zoom: 0.5;
+.svg-placeholder {
+  width: 960px;
+  height: 500px;
 }
