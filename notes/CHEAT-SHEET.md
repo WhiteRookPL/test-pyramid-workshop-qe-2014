@@ -62,21 +62,21 @@ Chcę zamknąć wszystkie elementy znajdujące się na liście,
 
 # Komendy
 
-1. `rake db:migrate`
-2. `rake db:test:clone`
-3. `rake bower:install`
-4. `rails generate rspec:install`
-5. `rake spec`
-6. `rails server`
-7. `RUN_GUI_TESTS.bat`
-8. `RUN_BDD.bat`
-8. `RUN_UT.bat`
-8. `START_SERVER.bat`
-9. `RESTORE.bat`
-10 `BDD_*.bat` lub `UT_*.bat` lub `GUI_*.bat`
-11. `bundle install`
-12. `PREPARE_APPLICATION.bat`
-13. `PREPARE_GUI_TESTS.bat`
+- `rake db:migrate`
+- `rake db:test:clone`
+- `rake bower:install`
+- `rails generate rspec:install`
+- `rake spec`
+- `rails server`
+- `bundle install`
+- `RUN_GUI_TESTS.bat`
+- `RUN_BDD.bat`
+- `RUN_UT.bat`
+- `START_SERVER.bat`
+- `RESTORE.bat`
+- `BDD_*.bat` lub `UT_*.bat` lub `GUI_*.bat`
+- `PREPARE_APPLICATION.bat`
+- `PREPARE_GUI_TESTS.bat`
 
 # Assignments - Cheat Sheets
 
@@ -86,19 +86,43 @@ TODO
 
 ## Komendy
 
-TODO
+- `RUN_GUI_TESTS.bat`
+- `RUN_BDD.bat`
+- `RUN_UT.bat`
+- `START_SERVER.bat`
+- `RESTORE.bat`
+- `BDD_*.bat` lub `UT_*.bat` lub `GUI_*.bat`
+- `PREPARE_APPLICATION.bat`
+- `PREPARE_GUI_TESTS.bat`
 
 ## Capybara
 
-TODO
+- `@session.find(selektor)` - Odszukaj i zwróć dokładnie jeden element pasujący do selektora.
+- `@session.all(selektor)` - Odszukaj i zwróć wszystkie elementy pasujące do selektora.
+- `ELEMENT.set(wartość_boolowska)` - Zaznacz/odznacz checkbox.
+- `ELEMENT.click` - Kliknij w element.
+- `ELEMENT.set(tekst)` - Wpisz tekst do elementu.
+- `@session.has_text? tekst` - Asercja czy tekst jest widoczny na stronie.
+- `@session.has_no_text? tekst` - Asercja czy tekst nie jest widoczny na stronie.
+- CSS - `.KLASA`
+- CSS - `#ID`
+- CSS - `nazwa_taga[nazwa_atrybutu='wartość_atrybutu']`
+- XPATH - `/root/element1/element2/element3[text(), contains('tekst')]`
 
 ## Cucumber
 
-TODO
+- `Given ...` - Inicjalizacja warunków początkowych testu.
+- `When ...` - Kroki do wykonania w ramach testu.
+- `Then ...` - Weryfikacja warunków wyjściowych z testu.
+- `Scenario` - Tytuł scenariusza.
+- `Feature` - Nazwa funkcjonalności którą testujemy.
 
 ## RSpec
 
-TODO
+- `expect(WARTOŚĆ).to eq(WARTOŚĆ)` - Asercja równości pomiędzy wartościami.
+- `expect(WARTOŚĆ).not_to eq(WARTOŚĆ)` - Asercja nierówności pomiędzy wartościami.
+- `before(:each)` - Kod wykonywany przed każdym z testów (*setup*).
+- `after(:each)` - Kod wykonywany po każdym z testów (*teardown*).
 
 # Detailed time plan
 
