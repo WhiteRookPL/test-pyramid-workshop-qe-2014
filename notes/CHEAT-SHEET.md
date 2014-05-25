@@ -28,6 +28,9 @@
   - Delikatnie naprowadzamy że co gdy dwóch ludzi zechce korzystać z aplikacji razem.
   - Użytkownicy widzą tylko swoje listy, nie ma współdzielnia.
 - Potem PO sam przyjmie słowo otwarte / zamknięte także w kontekście zadań.
+- Ucinać propozycję mobilnej aplikacji.
+- Ucinać propozycję integracji z systemami trzecimi.
+- Krystian chce koniecznie aplikację dla niego, nie chce korzystać z gotowych serwisów.
 
 # Słowniczek
 
@@ -80,9 +83,23 @@ Chcę zamknąć wszystkie elementy znajdujące się na liście,
 
 # Assignments - Cheat Sheets
 
-## Ruby
+## Ruby i Logika Domenowa
 
-TODO
+- Nowa zmienna: `a = 'Nowa zmienna'`
+- Dla każdego elementu w tablicy: `[ 1, 2, 3].each { |element| puts element }`
+- Stworzenie nowego modelu: `nowy = List.create(WARTOŚCI_POCZĄTKOWE)`
+  - Wartości początkowe: `:pole1 => wartość, :pole2 => wartość`
+- Stworzenie nowego obiektu: `nowy_obiekt = ListRepository.new`
+- Wyszukanie i zwrócenie jednego obiektu z bazy danych: `List.where(KRYTERIUM).first`
+  - Kryterium wyszukiwania: `:pole => wartość`
+- Wyszukanie wszystkich obiektów pasujących do kryteriów: `List.all.select { KRYTERIA }`
+  - Kryterium wyszukiwania: `{ |list| list.user.username == 'NAZWA_UŻYTKOWNIKA' }`
+- Zamknięcie listy: `lista.close!`
+- Otwarcie listy: `lista.open!`
+- Zamknięcie zadania: `zadanie.close!`
+- Otwarcie zadania: `zadanie.open!`
+- Dodanie zadania do listy: `lista.tasks.build(WARTOŚCI_POCZĄTKOWE)`
+- Zapisanie modelu do bazy: `MODEL.save!`
 
 ## Komendy
 
@@ -104,6 +121,9 @@ TODO
 - `ELEMENT.set(tekst)` - Wpisz tekst do elementu.
 - `@session.has_text? tekst` - Asercja czy tekst jest widoczny na stronie.
 - `@session.has_no_text? tekst` - Asercja czy tekst nie jest widoczny na stronie.
+
+## Selektory
+
 - CSS - `.KLASA`
 - CSS - `#ID`
 - CSS - `nazwa_taga[nazwa_atrybutu='wartość_atrybutu']`
@@ -116,6 +136,8 @@ TODO
 - `Then ...` - Weryfikacja warunków wyjściowych z testu.
 - `Scenario` - Tytuł scenariusza.
 - `Feature` - Nazwa funkcjonalności którą testujemy.
+- `user.password.should_not == nil` - Asercja dotycząca nierówności.
+- `user.password.should == nil` - Asercja dotycząca równości.
 
 ## RSpec
 
