@@ -1650,12 +1650,12 @@ var Reveal = (function(){
 	}
 
 	/**
-	 * Updates the background elements to reflect the current 
+	 * Updates the background elements to reflect the current
 	 * slide.
 	 */
 	function updateBackground() {
 
-		// Update the classes of all backgrounds to match the 
+		// Update the classes of all backgrounds to match the
 		// states of their slides (past/present/future)
 		toArray( dom.background.childNodes ).forEach( function( backgroundh, h ) {
 
@@ -2405,8 +2405,6 @@ var Reveal = (function(){
 	 */
 	function onOverviewSlideClicked( event ) {
 
-		// TODO There's a bug here where the event listeners are not
-		// removed after deactivating the overview.
 		if( eventsAreBound && isOverview() ) {
 			event.preventDefault();
 

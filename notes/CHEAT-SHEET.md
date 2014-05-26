@@ -28,6 +28,9 @@
   - Delikatnie naprowadzamy że co gdy dwóch ludzi zechce korzystać z aplikacji razem.
   - Użytkownicy widzą tylko swoje listy, nie ma współdzielnia.
 - Potem PO sam przyjmie słowo otwarte / zamknięte także w kontekście zadań.
+- Ucinać propozycję mobilnej aplikacji.
+- Ucinać propozycję integracji z systemami trzecimi.
+- Krystian chce koniecznie aplikację dla niego, nie chce korzystać z gotowych serwisów.
 
 # Słowniczek
 
@@ -62,43 +65,86 @@ Chcę zamknąć wszystkie elementy znajdujące się na liście,
 
 # Komendy
 
-1. `rake db:migrate`
-2. `rake db:test:clone`
-3. `rake bower:install`
-4. `rails generate rspec:install`
-5. `rake spec`
-6. `rails server`
-7. `RUN_GUI_TESTS.bat`
-8. `RUN_BDD.bat`
-8. `RUN_UT.bat`
-8. `START_SERVER.bat`
-9. `RESTORE.bat`
-10 `BDD_*.bat` lub `UT_*.bat` lub `GUI_*.bat`
-11. `bundle install`
-12. `PREPARE_APPLICATION.bat`
-13. `PREPARE_GUI_TESTS.bat`
+- `rake db:migrate`
+- `rake db:test:clone`
+- `rake bower:install`
+- `rails generate rspec:install`
+- `rake spec`
+- `rails server`
+- `bundle install`
+- `RUN_GUI_TESTS.bat`
+- `RUN_BDD.bat`
+- `RUN_UT.bat`
+- `START_SERVER.bat`
+- `RESTORE.bat`
+- `BDD_*.bat` lub `UT_*.bat` lub `GUI_*.bat`
+- `PREPARE_APPLICATION.bat`
+- `PREPARE_GUI_TESTS.bat`
 
 # Assignments - Cheat Sheets
 
-## Ruby
+## Ruby i Logika Domenowa
 
-TODO
+- Nowa zmienna: `a = 'Nowa zmienna'`
+- Dla każdego elementu w tablicy: `[ 1, 2, 3].each { |element| puts element }`
+- Stworzenie nowego modelu: `nowy = List.create(WARTOŚCI_POCZĄTKOWE)`
+  - Wartości początkowe: `:pole1 => wartość, :pole2 => wartość`
+- Stworzenie nowego obiektu: `nowy_obiekt = ListRepository.new`
+- Wyszukanie i zwrócenie jednego obiektu z bazy danych: `List.where(KRYTERIUM).first`
+  - Kryterium wyszukiwania: `:pole => wartość`
+- Wyszukanie wszystkich obiektów pasujących do kryteriów: `List.all.select { KRYTERIA }`
+  - Kryterium wyszukiwania: `{ |list| list.user.username == 'NAZWA_UŻYTKOWNIKA' }`
+- Zamknięcie listy: `lista.close!`
+- Otwarcie listy: `lista.open!`
+- Zamknięcie zadania: `zadanie.close!`
+- Otwarcie zadania: `zadanie.open!`
+- Dodanie zadania do listy: `lista.tasks.build(WARTOŚCI_POCZĄTKOWE)`
+- Zapisanie modelu do bazy: `MODEL.save!`
 
 ## Komendy
 
-TODO
+- `RUN_GUI_TESTS.bat`
+- `RUN_BDD.bat`
+- `RUN_UT.bat`
+- `START_SERVER.bat`
+- `RESTORE.bat`
+- `BDD_*.bat` lub `UT_*.bat` lub `GUI_*.bat`
+- `PREPARE_APPLICATION.bat`
+- `PREPARE_GUI_TESTS.bat`
 
 ## Capybara
 
-TODO
+- `@session.find(selektor)` - Odszukaj i zwróć dokładnie jeden element pasujący do selektora.
+- `@session.all(selektor)` - Odszukaj i zwróć wszystkie elementy pasujące do selektora.
+- `ELEMENT.set(wartość_boolowska)` - Zaznacz/odznacz checkbox.
+- `ELEMENT.click` - Kliknij w element.
+- `ELEMENT.set(tekst)` - Wpisz tekst do elementu.
+- `@session.has_text? tekst` - Asercja czy tekst jest widoczny na stronie.
+- `@session.has_no_text? tekst` - Asercja czy tekst nie jest widoczny na stronie.
+
+## Selektory
+
+- CSS - `.KLASA`
+- CSS - `#ID`
+- CSS - `nazwa_taga[nazwa_atrybutu='wartość_atrybutu']`
+- XPATH - `/root/element1/element2/element3[text(), contains('tekst')]`
 
 ## Cucumber
 
-TODO
+- `Given ...` - Inicjalizacja warunków początkowych testu.
+- `When ...` - Kroki do wykonania w ramach testu.
+- `Then ...` - Weryfikacja warunków wyjściowych z testu.
+- `Scenario` - Tytuł scenariusza.
+- `Feature` - Nazwa funkcjonalności którą testujemy.
+- `user.password.should_not == nil` - Asercja dotycząca nierówności.
+- `user.password.should == nil` - Asercja dotycząca równości.
 
 ## RSpec
 
-TODO
+- `expect(WARTOŚĆ).to eq(WARTOŚĆ)` - Asercja równości pomiędzy wartościami.
+- `expect(WARTOŚĆ).not_to eq(WARTOŚĆ)` - Asercja nierówności pomiędzy wartościami.
+- `before(:each)` - Kod wykonywany przed każdym z testów (*setup*).
+- `after(:each)` - Kod wykonywany po każdym z testów (*teardown*).
 
 # Detailed time plan
 
