@@ -1,49 +1,56 @@
 input.task-state {
-    float: left;
+    display: none;
+}
+
+input.task-state + label {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    cursor: pointer;
+    float: left;
     position: static;
+    height: 1.5rem;
+    line-height: 1.5rem;
     width: 4rem;
     opacity: 1;
     text-align: center;
+    font-size: 0.875rem;
+    font-family: 'Source Sans', helvetica, arial, sans-serif;
+    font-weight: 600;
 }
 
-input.task-state:before,
-input.task-state:checked:before {
+input.task-state + label,
+input.task-state:checked + label {
     box-shadow: inset 0 1px rgba(255,255,255,0.36), inset 0 -1px rgba(0,0,0,0.36), inset -1px 0 rgba(0,0,0,0.36);
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    content: "";
     display: block;
     text-shadow: 0 -1px rgba(0,0,0,0.69);
 }
 
-input.task-state:before {
+input.task-state + label {
     background: rgb(89, 91, 91);
     color: rgb(240, 241, 241);
-    content: "Todo";
 }
 
-input.task-state:hover:before {
+input.task-state + label:hover {
     background: rgb(114, 117, 116);
 }
 
-input.task-state:active:before {
+input.task-state + label:active {
     background-color: rgb(63, 64, 65);
     box-shadow: inset 0 1px rgba(0,0,0,0.05);
 }
 
-input.task-state:checked:before {
+input.task-state:checked + label {
     background: rgb(35, 150, 20);
     color: white;
-    content: "Done";
 }
 
-input.task-state:checked:hover:before {
+input.task-state:checked + label:hover {
     background: rgb(98, 186, 65);
 }
 
-input.task-state:checked:active:before {
+input.task-state:checked + label:active {
     background: rgb(5, 100, 0);
     box-shadow: inset 0 1px rgba(0,0,0,0.05);
 }

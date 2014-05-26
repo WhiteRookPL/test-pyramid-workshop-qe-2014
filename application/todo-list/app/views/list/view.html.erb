@@ -6,7 +6,9 @@
            class="task-state transition pressable"
            data-task-id="<%= task.id %>"
            data-list-id="<%= @list.id %>"
+           name="<%= @list.id.to_s + '_' + task.id.to_s %>"
            <% if task.closed %>checked="checked"<% end %> >
+           <label class="pressable transition" for="<%= @list.id.to_s + '_' + task.id.to_s %>"><% if task.closed %>Done <% else %> Todo <% end %></label>
     <div class="task-list__task__info">
         <span class="task-list__task__info__date"><%= h(task.date) %></span>
         <span class="task-list__task__info__title"><%= h(task.title) %></span>
