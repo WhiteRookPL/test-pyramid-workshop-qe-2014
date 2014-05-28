@@ -63,6 +63,15 @@ Jako Krystian,
 Chcę zamknąć wszystkie elementy znajdujące się na liście,
 Żeby lista została automatycznie zamknięta i nie wprowadzała mnie w błąd
 
+## BŁĘDY
+
+- Steps to reproduce -> to nie jest Test Case!
+- US nie powinno mieć narzuconego rozwiązania (np. przyciśnięcie przycisku robi kawę).
+- Zbyt dużo elementów w jednym US.
+  - Jedna funkcjonalność, ewentualnie dołączone "Acceptance Criteria" do niej.
+  - Złamanie Single Responsibility Principle (SRP).
+- Same "Acceptance Criteria" to nie jest US!
+
 # Komendy
 
 - `rake db:migrate`
