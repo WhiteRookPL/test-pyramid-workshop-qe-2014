@@ -245,7 +245,7 @@ Scenario: List can have many tasks
 ### Task 4 *
 
 ZADANIE: Napisać cały jeden test po stronie pliku feature, bez ani linijki kodu.
-ROZWIĄZANIE: Najprostsze ;):
+ROZWIĄZANIE:
 ~~~
 *Scenario: List with all closed tasks is now visible again*
   *Given there is one list named "Closed list" with 1 closed random task*
