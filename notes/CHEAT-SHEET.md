@@ -213,7 +213,14 @@ Feature:
 
 ### Task 2
 
-TODO
+ZADANIE: Uzupełnić scenariusz na podstawie istniejących już kroków.
+ROZWIĄZANIE:
+~~~
+Scenario: Task should has a date
+  Given there is one list named "Non-empty list" with one item named "Item on the list"
+  When "Non-empty list" will be opened
+  Then "Item on the list" item should have today's date
+~~~
 
 ### Task 3
 
