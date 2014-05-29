@@ -1,3 +1,3 @@
 # Jak zacząć?
 
-- Zajrzyj do pliku: `features/Lists_management.feature`
+- Zajrzyj do pliku: `features/Closed_lists_are_visible.feature`
