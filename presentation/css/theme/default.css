@@ -574,3 +574,18 @@ body {
   width: 960px;
   height: 500px;
 }
+
+.reveal q {
+  display: block;
+  font-style: italic;
+  margin: 10px 20px;
+}
+
+.reveal q:before {
+  display: block;
+  height: 0;
+  content: "“";
+  margin-right: 12em;
+  font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
+  color: #999;
+}
