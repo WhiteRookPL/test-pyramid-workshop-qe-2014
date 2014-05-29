@@ -224,27 +224,7 @@ Scenario: Task should has a date
 
 ### Task 3
 
-ZADANIE: Dopisać jeden cały hook w Cucumberze oraz napisanie całego testu praktycznie od 0.
-ROZWIĄZANIE:
-
-Kod źródłowy
-~~~
-Then(/^????????????$/) do |listName, tasksNumber|
-  # TODO: Wybierz listę o określonej nazwie i zweryfikuj, że ilość zadań w niej jest zgodna z parametrem testu.
-end
-~~~
-
-Scenariusz:
-~~~
-Scenario: List can have many tasks
-  Given there is one list named "??????" with 3 random tasks
-  When "?????" will be opened
-  Then ??????
-~~~
-
-### Task 4 *
-
-ZADANIE: Zadanie ma być do napisania od zera.
+ZADANIE: Dopisać jeden cały hook w Cucumberze oraz napisanie całego testu praktycznie od zera.
 ROZWIĄZANIE:
 
 Kod źródłowy
@@ -349,12 +329,94 @@ end
 
 ### Task 1
 
-TODO
+ZADANIE: Kilka literówek do poprawki na rozgrzewkę w trzech plikach.
+ROZWIĄZANIE:
+
+Scenariusz:
+~~~
+Scenario: Log in to the application
+  Given I am on log* *in page
+  When I type "krystian" into username field
+  And I type "te*z*t" into pas*s*word field
+  And I click log* *in button
+  Then I should see "Lists for krystian"
+~~~
+
+Kod źródłowy (LoginPage.rb):
+~~~
+def mapNameToSelecto*r*(name)
+~~~
+
+Kod źródłowy (pages.rb):
+~~~
+when 'log i*n*'
+~~~
 
 ### Task 2
 
-TODO
+ZADANIE: Uzupełnienie scenariusza według gotowych i zaimplementowanych już kroków.
+ROZWIĄZANIE:
+
+Scenariusz:
+~~~
+Scenario: Closing list
+  Given I am on lists page
+  And I typed "My new list" into new list field
+  And *I clicked add button*
+  And I saw "My new list"
+  And *I opened "My new list"*
+  And I typed "My new task" into new task field
+  And *I clicked add button*
+  When *I mark checkbox near "My new task"*
+  And I wait until pending requests will finish
+  And *I go to lists page*
+  Then *I should see "Lists for krystian"*
+  And I should not see "My new list"
+~~~
 
 ### Task 3
 
-TODO
+ZADANIE: Częściowa implementacja każdego fragmentu po trochu - opis scenariusza, implementacja kroków i poprawki literówek w jednym pliku (selektor XPATH jest z błędami).
+ROZWIĄZANIE:
+
+Scenariusz:
+~~~
+Scenario: Closing all tasks on the list
+  Given I am on lists page
+  And I typed "Someday it will be a closed list" into new list field
+  And *I clicked add button*
+  And I saw "Someday it will be a closed list"
+  And I opened "Someday it will be a closed list"
+  And I typed "My new task" into new task field
+  And *I clicked add button*
+  And *I cleared new task field*
+  And I saw "My new task"
+  And I typed "Another task" into new task field
+  And *I clicked add button*
+  And I cleared new task field
+  And I saw "Another task"
+  When I mark checkbox near "My new task"
+  And I wait until pending requests will finish
+  And *I mark checkbox near "Another task"*
+  And I wait until pending requests will finish
+  And I go to lists page
+  Then *I should see "Lists for krystian"*
+  And I should not see "Someday it will be a closed list"
+~~~
+
+Kod źródłowy (TaskListPage.rb):
+~~~
+def selectCheckBoxNearName(name)
+  @session.find(
+    :xpath,
+    "/html/body/section/ul/li/div/span[contains(text(), '#{name}*'*)]/*.*./preceding-sibling::lab*e*l"
+  )
+end
+~~~
+
+Kod źródłowy (interactions.rb):
+~~~
+Given(/^I cleared (.+?)$/) do |name|
+  *@page.type("", name)*
+end
+~~~
