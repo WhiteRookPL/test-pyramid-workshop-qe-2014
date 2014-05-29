@@ -191,24 +191,24 @@ ROZWIĄZANIE:
 Kod źródłowy:
 ~~~
 Given(/^there are no users$/) do
-  User.delete_all
+  User.delete_al*l*
 end
 ~~~
 
 Kod źródłowy:
 ~~~
 When(/^"([^"]+)" account is created with random password$/) do |username|
-  User.create!(:username => username, :password => random_password())
+  User.create!(:user*name* => username, :pas*s*word => random_pas*s*word())
 end
 ~~~
 
 Feature:
 ~~~
   Scenario: Create new user
-    Given there are no users
-    When "Krystian" account is created with random password
+    Given there are no user*s*
+    When "Kr*y*stian" account is created with random password
     Then "Krystian" account should be available
-    And "Krystian" should have non empty password
+    And "Krystian" should have non empty pas*s*word
 ~~~
 
 ### Task 2
@@ -265,11 +265,11 @@ Scenario: List can be reopened with all tasks at once
 ZADANIE: Naprawić literówki w pliku `task_spec.rb`.
 ROZWIĄZANIE:
 ~~~
-require 'spec_helper'
+require 'spec_helper*'*
 
-describe Task do
-  it { should belong_to :list }
-end
+describe Task *do*
+  it *{* should belong_to :list }
+*end*
 ~~~
 
 ### Task 2
@@ -278,7 +278,7 @@ ZADANIE: Napisać nową asercję weryfikującą poprawne zalogowanie użytkownik
 ROZWIĄZANIE:
 ~~~
 it "should be authenticated when password match" do
-  expect(@user.will_authenticate?("password")).to eq(true)
+  *expect(@user.will_authenticate?("password")).to eq(true)*
 end
 ~~~
 
@@ -292,15 +292,15 @@ before(:each) do
 
   opened = List.create(:name => "Opened List")
   closed = List.create(:name => "Closed List")
-  closed.close!
+  *closed.close!*
 
-  @repository.add(opened)
-  @repository.add(closed)
+  *@repository.add(opened)*
+  *@repository.add(closed)*
 end
 
 it "not available lists should not be retrieved from repository" do
-  expect(@repository.all.count).to eq(1)
-  expect(@repository.all.first.name).to eq("Opened List")
+  expect(@repository.all.count).to eq(*1*)
+  expect(@repository.all.first.name).to eq(*"Opened List"*)
 end
 ~~~
 
