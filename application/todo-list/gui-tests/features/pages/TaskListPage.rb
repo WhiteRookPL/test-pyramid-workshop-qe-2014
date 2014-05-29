@@ -1,7 +1,3 @@
-# Zadanie GUI_3:
-# TODO: W tej klasie coś jest nie tak. Odpal testy za pomocą 'RUN_GUI_TESTS.bat'
-#       i przeanalizuj komunikaty błędów.
-
 class TaskListPage < BasePage
   include Ajax
 
@@ -12,7 +8,7 @@ class TaskListPage < BasePage
   def selectCheckBoxNearName(name)
     @session.find(
       :xpath,
-      "/html/body/section/ul/li/div/span[contains(text(), '#{name})]/./preceding-sibling::labl"
+      "/html/body/section/ul/li/div/span[contains(text(), '#{name}')]/../preceding-sibling::label"
     )
   end
 
