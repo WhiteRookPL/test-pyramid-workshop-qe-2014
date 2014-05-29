@@ -10,22 +10,10 @@ Feature: Tasks Management
     Then 1 task in "New list" is available
     And "Task to do" item should be opened
 
-  #
-  # Zadanie BDD_2:
-  #
-  # W tym zadaniu zapoznamy się z budową hooków w Cucumber. Korzystając z już zaimplementowanych kroków,
-  # zweryfikujemy wymaganie, że każde zadanie musi mieć datę. Wszystkie kroki są już zaimplementowane,
-  # nie potrzebujemy więcej niż 3 dołączone poniżej kroki.
-  #
-  # Baw się dobrze!
-  # W razie problemów - nie krępuj się, zapytaj. :)
-  #
-
-  @bdd2
   Scenario: Task should has a date
-    Given ???
-    When ???
-    Then ???
+    Given there is one list named "Non-empty list" with one item named "Item on the list"
+    When "Non-empty list" will be opened
+    Then "Item on the list" item should have today's date
 
   Scenario: Task should have a default state "Open"
     Given there is one list named "Non-empty list" with one item named "Opened by default"
