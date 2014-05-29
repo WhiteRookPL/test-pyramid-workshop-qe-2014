@@ -1,1 +1,1 @@
-bundle exec cucumber features -c -t @bdd1
+bundle exec cucumber features -c -t @bdd3

@@ -3,22 +3,11 @@ Feature: User Management
   As a unknown user
   I want to sign in and log in to the application
 
-  #
-  # Zadanie BDD_1:
-  #
-  # W tym pliku (oraz pliku 'step_definitions/users.rb') znajduje się kilka literówek do poprawienia.
-  # Nie ma żadnego większego zadania programistycznego - to rozgrzewka służąca do zapoznania się z kodem.
-  #
-  # Baw się dobrze!
-  # W razie problemów - nie krępuj się, zapytaj. :)
-  #
-
-  @bdd1
   Scenario: Create new user
-    Given there are no user
-    When "Krstian" account is created with random password
+    Given there are no users
+    When "Krystian" account is created with random password
     Then "Krystian" account should be available
-    And "Krystian" should have non empty pasword
+    And "Krystian" should have non empty password
 
   Scenario: Sucessful authentication
     Given there is one user "Krystian" with password "123"
