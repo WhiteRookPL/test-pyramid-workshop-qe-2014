@@ -217,14 +217,30 @@ ZADANIE: Uzupełnić scenariusz na podstawie istniejących już kroków.
 ROZWIĄZANIE:
 ~~~
 Scenario: Task should has a date
-  Given there is one list named "Non-empty list" with one item named "Item on the list"
-  When "Non-empty list" will be opened
-  Then "Item on the list" item should have today's date
+  Given *there is one list named "Non-empty list" with one item named "Item on the list"*
+  When *"Non-empty list" will be opened*
+  Then *"Item on the list" item should have today's date*
 ~~~
 
 ### Task 3
 
-TODO
+ZADANIE: Dopisać jeden cały hook w Cucumberze oraz napisanie całego testu praktycznie od 0.
+ROZWIĄZANIE:
+
+Kod źródłowy
+~~~
+Then(/^????????????$/) do |listName, tasksNumber|
+  # TODO: Wybierz listę o określonej nazwie i zweryfikuj, że ilość zadań w niej jest zgodna z parametrem testu.
+end
+~~~
+
+Scenariusz:
+~~~
+Scenario: List can have many tasks
+  Given there is one list named "??????" with 3 random tasks
+  When "?????" will be opened
+  Then ??????
+~~~
 
 ### Task 4 *
 
