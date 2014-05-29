@@ -207,7 +207,15 @@ TODO: Zadanie ma być do napisania od zera.
 
 ### Task 1
 
-TODO
+ZADANIE: Naprawić literówki w pliku `task_spec.rb`.
+ROZWIĄZANIE:
+~~~
+require 'spec_helper'
+
+describe Task do
+  it { should belong_to :list }
+end
+~~~
 
 ### Task 2
 
