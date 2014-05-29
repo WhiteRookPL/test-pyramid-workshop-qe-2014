@@ -2,8 +2,10 @@ Given(/^"([^"]+)" should have "([^"]+)"$/) do |username, listName|
   List.where(:name => listName).first.user.username.should == username
 end
 
+# TODO: W tym pliku mamy kilka literówek do poprawy.
+# TODO: Jedna jest tutaj...
 Given(/^there are no users$/) do
-  User.delete_all
+  User.delete_al
 end
 
 Given(/^there is one user "([^"]+)" with password "([^"]+)"$/) do |username, password|
@@ -20,7 +22,10 @@ Given(/^there is one authenticated user "([^"]+)" with password "([^"]+)"$/) do 
 end
 
 When(/^"([^"]+)" account is created with random password$/) do |username|
-  User.create!(:username => username, :password => random_password())
+  # TODO: Druga, trzecia i czwarta są tutaj...
+  # Spójrz dokładnie do pliku 'app/models/user.rb'.
+
+  User.create!(:user => username, :pasword => random_pasword())
 end
 
 When(/^"([^"]+)" log out$/) do |username|

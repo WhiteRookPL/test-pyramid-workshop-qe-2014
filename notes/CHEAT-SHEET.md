@@ -185,7 +185,31 @@ Chcę zamknąć wszystkie elementy znajdujące się na liście,
 
 ### Task 1
 
-TODO
+ZADANIE: Kilka błędów językowo-składniowych w pliku 'User_management.feature' oraz w pliku 'users.rb'.
+ROZWIĄZANIE:
+
+Kod źródłowy:
+~~~
+Given(/^there are no users$/) do
+  User.delete_all
+end
+~~~
+
+Kod źródłowy:
+~~~
+When(/^"([^"]+)" account is created with random password$/) do |username|
+  User.create!(:username => username, :password => random_password())
+end
+~~~
+
+Feature:
+~~~
+  Scenario: Create new user
+    Given there are no users
+    When "Krystian" account is created with random password
+    Then "Krystian" account should be available
+    And "Krystian" should have non empty password
+~~~
 
 ### Task 2
 
@@ -197,11 +221,42 @@ TODO
 
 ### Task 4 *
 
-TODO: Zadanie ma być do napisania od zera.
+ZADANIE: Zadanie ma być do napisania od zera.
+ROZWIĄZANIE:
+
+Kod źrodłowy:
+~~~
+~~~
+
+Scenariusz:
+~~~
+@skip
+Scenario: List with all closed tasks is now visible again
+  Given there is one list named "Closed list" with 1 closed random task
+  When "Closed list" will be opened
+  Then "Closed list" should not be available
+  And "Closed list" should be in repository
+~~~
 
 ### Task 5 *
 
-TODO: Zadanie ma być do napisania od zera.
+ZADANIE: Zadanie ma być do napisania od zera.
+ROZWIĄZANIE:
+
+Kod źrodłowy:
+~~~
+~~~
+
+Scenariusz:
+~~~
+@skip
+Scenario: List can be reopened with all tasks at once
+  Given there is one list named "Closed list" with 3 closed random tasks
+  When "Closed list" will be reopened
+  Then all tasks on "Closed list" should be opened
+  And "Closed list" should be available
+  And "Closed list" should be in repository
+~~~
 
 ## Unit Tests
 
@@ -219,11 +274,35 @@ end
 
 ### Task 2
 
-TODO
+ZADANIE: Napisać nową asercję weryfikującą poprawne zalogowanie użytkownika w pliku `user_spec.rb`.
+ROZWIĄZANIE:
+~~~
+it "should be authenticated when password match" do
+  expect(@user.will_authenticate?("password")).to eq(true)
+end
+~~~
 
 ### Task 3
 
-TODO
+ZADANIE: Zapoznanie się z mechanizmem `before`/`after` przy testach jednostkowych. Należy uzupełnić poprawne wartości w asercjach i uzupełnić metodę `before` ustawiającą dane do testu. Repozytorium zwraca tylko listy otwarte.
+ROZWIĄZANIE:
+~~~
+before(:each) do
+  @repository = ListRepository.new
+
+  opened = List.create(:name => "Opened List")
+  closed = List.create(:name => "Closed List")
+  closed.close!
+
+  @repository.add(opened)
+  @repository.add(closed)
+end
+
+it "not available lists should not be retrieved from repository" do
+  expect(@repository.all.count).to eq(1)
+  expect(@repository.all.first.name).to eq("Opened List")
+end
+~~~
 
 ## GUI Tests
 
