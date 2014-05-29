@@ -1,3 +1,3 @@
 # Jak zacząć?
 
-- Zajrzyj do pliku: `spec/models/list_repository_spec.rb`
+- Zajrzyj do pliku: `gui-tests/features/1.Log_in_to_the_application.feature`
