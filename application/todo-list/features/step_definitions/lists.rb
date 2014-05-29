@@ -1,3 +1,4 @@
+# coding: utf-8
 Given(/^there is one list named "([^"]+)" with (\d+) task for "([^"]+)"$/) do |listName, tasksNumber, username|
   user = User.where(:username => username).first
   list = List.create(:name => listName)
@@ -86,9 +87,9 @@ Then(/^"([^"]+)" should has today's date$/) do |listName|
 end
 
 # TODO: Napisz poprawne wyrażenie regularne.
-Then(/^????????????$/) do |listName, tasksNumber|
+#Then(/^????????????$/) do |listName, tasksNumber|
   # TODO: Wybierz listę o określonej nazwie i zweryfikuj, że ilość zadań w niej jest zgodna z parametrem testu.
-end
+#end
 
 Then(/^"([^"]+)" should be in repository$/) do |listName|
   List.where(:name => listName).count == 1
