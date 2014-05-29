@@ -1,3 +1,13 @@
+#
+# Zadanie UT_2:
+#
+# W tym zadaniu zapoznamy się z asercjami w RSpec.
+# Dokładny opis znajdziesz poniżej - tylko w tym miejscu, będziemy to modyfikować.
+#
+# Baw się dobrze!
+# W razie problemów - nie krępuj się, zapytaj. :)
+#
+
 require 'spec_helper'
 
 describe User do
@@ -10,7 +20,8 @@ describe User do
   end
 
   it "should be authenticated when password match" do
-    expect(@user.will_authenticate?("password")).to eq(true)
+    # TODO: Właśnie tu powinno się znaleźć wyrażenie weryfikujące, że dla poprawnego hasła użytkownika
+    #       zostanie on zautoryzowany poprawnie.
   end
 
   it "should not be authenticated when does not match" do
