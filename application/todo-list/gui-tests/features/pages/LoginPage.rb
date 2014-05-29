@@ -4,7 +4,7 @@ class LoginPage < BasePage
     super(session)
   end
 
-  def mapNameToSelecto(name)
+  def mapNameToSelector(name)
     case name
       when 'username field'
         '#username'

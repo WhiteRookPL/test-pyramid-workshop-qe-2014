@@ -1,6 +1,6 @@
 def createPageObject(pageName)
   case pageName
-    when 'log i'
+    when 'log in'
       LoginPage.new(Capybara.current_session)
 
     when 'lists'
