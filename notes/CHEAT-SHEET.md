@@ -282,7 +282,10 @@ ROZWIĄZANIE:
 Kod źrodłowy:
 ~~~
 When(/^"([^"]+)" will be reopened$/) do |listName|
-  # TODO: Pomyśl, jak ponownie otworzyć listę - zobacz w tym celu plik 'app/models/list.rb'.
+  *list = List.where(:name => listName).first*
+
+  *list.reopen!*
+  *list.save!*
 end
 ~~~
 

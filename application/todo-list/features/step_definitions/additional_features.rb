@@ -12,7 +12,10 @@ Given(/^there is one list named "([^"]+)" with (\d+) closed random tasks?$/) do 
 end
 
 When(/^"([^"]+)" will be reopened$/) do |listName|
-  # TODO: Pomyśl, jak ponownie otworzyć listę - zobacz w tym celu plik 'app/models/list.rb'.
+  list = List.where(:name => listName).first
+
+  list.reopen!
+  list.save!
 end
 
 Then(/^all tasks on "([^"]+)" should be opened$/) do |listName|
