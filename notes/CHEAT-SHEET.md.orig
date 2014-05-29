@@ -225,6 +225,8 @@ Scenario: Task should has a date
 ### Task 3
 
 ZADANIE: Dopisać jeden cały hook w Cucumberze oraz napisanie całego testu praktycznie od 0.
+<<<<<<< HEAD
+=======
 ROZWIĄZANIE:
 
 Kod źródłowy
@@ -245,6 +247,7 @@ Scenario: List can have many tasks
 ### Task 4 *
 
 ZADANIE: Zadanie ma być do napisania od zera.
+>>>>>>> 5cb3db5... Assignment BDD_3.
 ROZWIĄZANIE:
 
 Kod źródłowy

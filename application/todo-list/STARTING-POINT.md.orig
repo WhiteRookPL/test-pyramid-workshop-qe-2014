@@ -1,7 +1,7 @@
 # Jak zacząć?
 
 <<<<<<< HEAD
-- Zajrzyj do pliku: `spec/models/user_spec.rb`
+- Zajrzyj do pliku: `Closed_lists_are_visible.feature`
 =======
-- Zajrzyj do pliku: `spec/models/list_repository_spec.rb`
->>>>>>> 77869ec... Assignment UT_3.
+- Zajrzyj do pliku: `features/Tasks_management.feature`
+>>>>>>> 648dc27... Assignment BDD_2.
