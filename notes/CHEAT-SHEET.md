@@ -74,13 +74,6 @@ Chcę zamknąć wszystkie elementy znajdujące się na liście,
 
 # Komendy
 
-- `rake db:migrate`
-- `rake db:test:clone`
-- `rake bower:install`
-- `rails generate rspec:install`
-- `rake spec`
-- `rails server`
-- `bundle install`
 - `RUN_GUI_TESTS.bat`
 - `RUN_BDD.bat`
 - `RUN_UT.bat`
@@ -89,6 +82,13 @@ Chcę zamknąć wszystkie elementy znajdujące się na liście,
 - `BDD_*.bat` lub `UT_*.bat` lub `GUI_*.bat`
 - `PREPARE_APPLICATION.bat`
 - `PREPARE_GUI_TESTS.bat`
+- `rake db:migrate`
+- `rake db:test:clone`
+- `rake bower:install`
+- `rails generate rspec:install`
+- `rake spec`
+- `rails server`
+- `bundle install`
 
 # Assignments - Cheat Sheets
 
@@ -112,6 +112,8 @@ Chcę zamknąć wszystkie elementy znajdujące się na liście,
 
 ## Komendy
 
+- Zamknięcie aktualnie uruchomionej komendy `CTRL-C`.
+- Uzupełnienie nazwy pliku lub katalogu `TAB`.
 - `RUN_GUI_TESTS.bat`
 - `RUN_BDD.bat`
 - `RUN_UT.bat`
@@ -120,6 +122,12 @@ Chcę zamknąć wszystkie elementy znajdujące się na liście,
 - `BDD_*.bat` lub `UT_*.bat` lub `GUI_*.bat`
 - `PREPARE_APPLICATION.bat`
 - `PREPARE_GUI_TESTS.bat`
+
+## Aplikacja
+
+- Przygotowani użytkownicy w aplikacji:
+  - Username: `krystian`, Hasło: `test`
+  - Username: `andrzej`, Hasło: `test`
 
 ## Capybara
 
