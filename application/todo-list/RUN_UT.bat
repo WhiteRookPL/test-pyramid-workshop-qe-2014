@@ -1,1 +1,1 @@
-rake spec
+bundle exec rake spec
