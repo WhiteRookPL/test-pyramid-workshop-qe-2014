@@ -2,8 +2,10 @@ Given(/^"([^"]+)" should have "([^"]+)"$/) do |username, listName|
   List.where(:name => listName).first.user.username.should == username
 end
 
+# Zadanie BDD_1:
+# TODO: Literówka do poprawienia.
 Given(/^there are no users$/) do
-  User.delete_all
+  User.delete_al
 end
 
 Given(/^there is one user "([^"]+)" with password "([^"]+)"$/) do |username, password|
@@ -19,8 +21,10 @@ Given(/^there is one authenticated user "([^"]+)" with password "([^"]+)"$/) do 
   end
 end
 
+# Zadanie BDD_1:
+# TODO: Kolejne literówki do poprawienia.
 When(/^"([^"]+)" account is created with random password$/) do |username|
-  User.create!(:username => username, :password => random_password())
+  User.create!(:user => username, :pasword => random_pasword())
 end
 
 When(/^"([^"]+)" log out$/) do |username|
