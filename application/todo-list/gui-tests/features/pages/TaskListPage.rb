@@ -6,7 +6,10 @@ class TaskListPage < BasePage
   end
 
   def selectCheckBoxNearName(name)
-    @session.find(:xpath, "/html/body/section/ul/li/div/span[contains(text(), '#{name}')]/../preceding-sibling::input")
+    @session.find(
+      :xpath,
+      "/html/body/section/ul/li/div/span[contains(text(), '#{name}')]/../preceding-sibling::label"
+    )
   end
 
   def mapNameToSelector(name)
@@ -23,7 +26,7 @@ class TaskListPage < BasePage
   end
 
   def checkNear(name)
-    selectCheckBoxNearName(name).set(true)
+    selectCheckBoxNearName(name).click
   end
 
 end
