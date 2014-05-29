@@ -229,17 +229,17 @@ ROZWIĄZANIE:
 
 Kod źródłowy
 ~~~
-Then(/^????????????$/) do |listName, tasksNumber|
-  # TODO: Wybierz listę o określonej nazwie i zweryfikuj, że ilość zadań w niej jest zgodna z parametrem testu.
+Then(/^*"([^"]+)" has (\d+) tasks? inside*$/) do |listName, tasksNumber|
+  *List.where(:name => listName).first.tasks.count.should == tasksNumber.to_i*
 end
 ~~~
 
 Scenariusz:
 ~~~
 Scenario: List can have many tasks
-  Given there is one list named "??????" with 3 random tasks
-  When "?????" will be opened
-  Then ??????
+  Given there is one list named "*My non-empty list*" with 3 random tasks
+  When "*My non-empty list*" will be opened*
+  Then *"My non-empty list" has 3 tasks inside*
 ~~~
 
 ### Task 4 *

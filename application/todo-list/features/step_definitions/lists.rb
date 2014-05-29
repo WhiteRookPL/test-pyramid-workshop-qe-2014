@@ -85,9 +85,8 @@ Then(/^"([^"]+)" should has today's date$/) do |listName|
   List.where(:name => listName).first.date.should == Date.today
 end
 
-# TODO: Napisz poprawne wyrażenie regularne.
-Then(/^????????????$/) do |listName, tasksNumber|
-  # TODO: Wybierz listę o określonej nazwie i zweryfikuj, że ilość zadań w niej jest zgodna z parametrem testu.
+Then(/^"([^"]+)" has (\d+) tasks? inside$/) do |listName, tasksNumber|
+  List.where(:name => listName).first.tasks.count.should == tasksNumber.to_i
 end
 
 Then(/^"([^"]+)" should be in repository$/) do |listName|
