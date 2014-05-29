@@ -276,22 +276,24 @@ ROZWIĄZANIE: Najprostsze ;):
 
 ### Task 5 *
 
-ZADANIE: Zadanie ma być do napisania od zera.
+ZADANIE: Zaimplementować kompletny test w oparciu o jeden nowy krok i resztę starszych, który zweryfikuje możliwość ponownego otwarcia listy z zadaniami (zmiana wymagań).
 ROZWIĄZANIE:
 
 Kod źrodłowy:
 ~~~
+When(/^"([^"]+)" will be reopened$/) do |listName|
+  # TODO: Pomyśl, jak ponownie otworzyć listę - zobacz w tym celu plik 'app/models/list.rb'.
+end
 ~~~
 
 Scenariusz:
 ~~~
-@skip
 Scenario: List can be reopened with all tasks at once
-  Given there is one list named "Closed list" with 3 closed random tasks
-  When "Closed list" will be reopened
-  Then all tasks on "Closed list" should be opened
-  And "Closed list" should be available
-  And "Closed list" should be in repository
+  *Given there is one list named "Closed list" with 3 closed random tasks*
+  *When "Closed list" will be reopened*
+  *Then all tasks on "Closed list" should be opened*
+  *And "Closed list" should be available*
+  *And "Closed list" should be in repository*
 ~~~
 
 ## Unit Tests
