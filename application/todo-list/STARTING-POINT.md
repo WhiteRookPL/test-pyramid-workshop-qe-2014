@@ -1,3 +1,3 @@
 # Jak zacząć?
 
-- Zajrzyj do pliku: `gui-tests/features/2.Closed_list_is_not_visible_to_the_user.feature`
+- Zajrzyj do pliku: `gui-tests/features/3.List_is_closed_when_all_tasks_are_closed.feature`
