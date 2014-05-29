@@ -11,7 +11,8 @@ Given(/^I clicked (.+?)$/) do |name|
 end
 
 Given(/^I cleared (.+?)$/) do |name|
-  @page.type("", name)
+	# Zadanie GUI_3:
+  # TODO: Zaimplementuj mechanizm czyszczenia pola tekstowego.
 end
 
 When(/^I click (.+?)$/) do |name|
