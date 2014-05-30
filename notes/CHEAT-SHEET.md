@@ -90,81 +90,9 @@ Chcę zamknąć wszystkie elementy znajdujące się na liście,
 - `rails server`
 - `bundle install`
 
-# Assignments - Cheat Sheets
-
-## Ruby i Logika Domenowa
-
-- Nowa zmienna: `a = 'Nowa zmienna'`
-- Dla każdego elementu w tablicy: `[ 1, 2, 3].each { |element| puts element }`
-- Stworzenie nowego modelu: `nowy = List.create(WARTOŚCI_POCZĄTKOWE)`
-  - Wartości początkowe: `:pole1 => wartość, :pole2 => wartość`
-- Stworzenie nowego obiektu: `nowy_obiekt = ListRepository.new`
-- Wyszukanie i zwrócenie jednego obiektu z bazy danych: `List.where(KRYTERIUM).first`
-  - Kryterium wyszukiwania: `:pole => wartość`
-- Wyszukanie wszystkich obiektów pasujących do kryteriów: `List.all.select { KRYTERIA }`
-  - Kryterium wyszukiwania: `{ |list| list.user.username == 'NAZWA_UŻYTKOWNIKA' }`
-- Zamknięcie listy: `lista.close!`
-- Otwarcie listy: `lista.open!`
-- Zamknięcie zadania: `zadanie.close!`
-- Otwarcie zadania: `zadanie.open!`
-- Dodanie zadania do listy: `lista.tasks.build(WARTOŚCI_POCZĄTKOWE)`
-- Zapisanie modelu do bazy: `MODEL.save!`
-
-## Komendy
-
-- Zamknięcie aktualnie uruchomionej komendy `CTRL-C`.
-- Uzupełnienie nazwy pliku lub katalogu `TAB`.
-- `RUN_GUI_TESTS.bat`
-- `RUN_BDD.bat`
-- `RUN_UT.bat`
-- `START_SERVER.bat`
-- `RESTORE.bat`
-- `BDD_*.bat` lub `UT_*.bat` lub `GUI_*.bat`
-- `PREPARE_APPLICATION.bat`
-- `PREPARE_GUI_TESTS.bat`
-
-## Aplikacja
-
-- Przygotowani użytkownicy w aplikacji:
-  - Username: `krystian`, Hasło: `test`
-  - Username: `andrzej`, Hasło: `test`
-
-## Capybara
-
-- `@session.find(selektor)` - Odszukaj i zwróć dokładnie jeden element pasujący do selektora.
-- `@session.all(selektor)` - Odszukaj i zwróć wszystkie elementy pasujące do selektora.
-- `ELEMENT.set(wartość_boolowska)` - Zaznacz/odznacz checkbox.
-- `ELEMENT.click` - Kliknij w element.
-- `ELEMENT.set(tekst)` - Wpisz tekst do elementu.
-- `@session.has_text? tekst` - Asercja czy tekst jest widoczny na stronie.
-- `@session.has_no_text? tekst` - Asercja czy tekst nie jest widoczny na stronie.
-
-## Selektory
-
-- CSS - `.KLASA`
-- CSS - `#ID`
-- CSS - `nazwa_taga[nazwa_atrybutu='wartość_atrybutu']`
-- XPATH - `/root/element1/element2/element3[text(), contains('tekst')]`
-
-## Cucumber
-
-- `Given ...` - Inicjalizacja warunków początkowych testu.
-- `When ...` - Kroki do wykonania w ramach testu.
-- `Then ...` - Weryfikacja warunków wyjściowych z testu.
-- `Scenario` - Tytuł scenariusza.
-- `Feature` - Nazwa funkcjonalności którą testujemy.
-- `user.password.should_not == nil` - Asercja dotycząca nierówności.
-- `user.password.should == nil` - Asercja dotycząca równości.
-
-## RSpec
-
-- `expect(WARTOŚĆ).to eq(WARTOŚĆ)` - Asercja równości pomiędzy wartościami.
-- `expect(WARTOŚĆ).not_to eq(WARTOŚĆ)` - Asercja nierówności pomiędzy wartościami.
-- `before(:each)` - Kod wykonywany przed każdym z testów (*setup*).
-- `after(:each)` - Kod wykonywany po każdym z testów (*teardown*).
-
 # Detailed time plan
 
+```
 00:00 - 00:05 -  5 - KK    - Informacja o pytaniach (w trakcie) i ankietach (w trakcie).
 00:05 - 00:30 - 25 - KK    - Wprowadzenie i pierwszy blok teorii (do opisu persony - Krystiana Kocura).
 00:30 - 01:00 - 30 - RAZEM - Opis persony, rozmowa z PO, zadanie z przygotowania User Stories.
@@ -178,6 +106,7 @@ Chcę zamknąć wszystkie elementy znajdujące się na liście,
 03:10 - 03:25 - 15 - WG    - Testy end to end - GUI - teoria.
 03:25 - 03:55 - 30 - RAZEM - Zadania z testów automatycznych GUI.
 03:55 - 04:00 -  5 - WG    - Podsumowanie.
+```
 
 # Assignments - Details
 
@@ -186,128 +115,136 @@ Chcę zamknąć wszystkie elementy znajdujące się na liście,
 ### Task 1
 
 ZADANIE: Kilka błędów językowo-składniowych w pliku 'User_management.feature' oraz w pliku 'users.rb'.
+
 ROZWIĄZANIE:
 
 Kod źródłowy:
-~~~
+```
 Given(/^there are no users$/) do
   User.delete_al*l*
 end
-~~~
+```
 
 Kod źródłowy:
-~~~
+```
 When(/^"([^"]+)" account is created with random password$/) do |username|
   User.create!(:user*name* => username, :pas*s*word => random_pas*s*word())
 end
-~~~
+```
 
 Feature:
-~~~
+```
   Scenario: Create new user
     Given there are no user*s*
     When "Kr*y*stian" account is created with random password
     Then "Krystian" account should be available
     And "Krystian" should have non empty pas*s*word
-~~~
+```
 
 ### Task 2
 
 ZADANIE: Uzupełnić scenariusz na podstawie istniejących już kroków.
+
 ROZWIĄZANIE:
-~~~
+```
 Scenario: Task should has a date
   Given *there is one list named "Non-empty list" with one item named "Item on the list"*
   When *"Non-empty list" will be opened*
   Then *"Item on the list" item should have today's date*
-~~~
+```
 
 ### Task 3
 
 ZADANIE: Dopisać jeden cały hook w Cucumberze oraz napisanie całego testu praktycznie od zera.
+
 ROZWIĄZANIE:
 
 Kod źródłowy
-~~~
+```
 Then(/^*"([^"]+)" has (\d+) tasks? inside*$/) do |listName, tasksNumber|
   *List.where(:name => listName).first.tasks.count.should == tasksNumber.to_i*
 end
-~~~
+```
 
 Scenariusz:
-~~~
+```
 Scenario: List can have many tasks
   Given there is one list named "*My non-empty list*" with 3 random tasks
   When "*My non-empty list*" will be opened*
   Then *"My non-empty list" has 3 tasks inside*
-~~~
+```
 
 ### Task 4 *
 
 ZADANIE: Napisać cały jeden test po stronie pliku feature, bez ani linijki kodu.
+
 ROZWIĄZANIE:
-~~~
+```
 *Scenario: List with all closed tasks is now visible again*
   *Given there is one list named "Closed list" with 1 closed random task*
   *When "Closed list" will be opened*
   *Then "Closed list" should not be available*
   *And "Closed list" should be in repository*
-~~~
+```
 
 ### Task 5 *
 
 ZADANIE: Zaimplementować kompletny test w oparciu o jeden nowy krok i resztę starszych, który zweryfikuje możliwość ponownego otwarcia listy z zadaniami (zmiana wymagań).
+
 ROZWIĄZANIE:
 
 Kod źrodłowy:
-~~~
+```
 When(/^"([^"]+)" will be reopened$/) do |listName|
   *list = List.where(:name => listName).first*
 
   *list.reopen!*
   *list.save!*
 end
-~~~
+```
 
 Scenariusz:
-~~~
+```
 Scenario: List can be reopened with all tasks at once
   *Given there is one list named "Closed list" with 3 closed random tasks*
   *When "Closed list" will be reopened*
   *Then all tasks on "Closed list" should be opened*
   *And "Closed list" should be available*
   *And "Closed list" should be in repository*
-~~~
+```
 
 ## Unit Tests
 
 ### Task 1
 
 ZADANIE: Naprawić literówki w pliku `task_spec.rb`.
+
 ROZWIĄZANIE:
-~~~
+```
 require 'spec_helper*'*
 
 describe Task *do*
   it *{* should belong_to :list }
 *end*
-~~~
+```
 
 ### Task 2
 
 ZADANIE: Napisać nową asercję weryfikującą poprawne zalogowanie użytkownika w pliku `user_spec.rb`.
+
 ROZWIĄZANIE:
-~~~
+```
 it "should be authenticated when password match" do
   *expect(@user.will_authenticate?("password")).to eq(true)*
 end
-~~~
+```
 
 ### Task 3
 
 ZADANIE: Zapoznanie się z mechanizmem `before`/`after` przy testach jednostkowych. Należy uzupełnić poprawne wartości w asercjach i uzupełnić metodę `before` ustawiającą dane do testu. Repozytorium zwraca tylko listy otwarte.
+
 ROZWIĄZANIE:
-~~~
+```
 before(:each) do
   @repository = ListRepository.new
 
@@ -323,42 +260,44 @@ it "not available lists should not be retrieved from repository" do
   expect(@repository.all.count).to eq(*1*)
   expect(@repository.all.first.name).to eq(*"Opened List"*)
 end
-~~~
+```
 
 ## GUI Tests
 
 ### Task 1
 
 ZADANIE: Kilka literówek do poprawki na rozgrzewkę w trzech plikach.
+
 ROZWIĄZANIE:
 
 Scenariusz:
-~~~
+```
 Scenario: Log in to the application
   Given I am on log* *in page
   When I type "krystian" into username field
   And I type "te*z*t" into pas*s*word field
   And I click log* *in button
   Then I should see "Lists for krystian"
-~~~
+```
 
 Kod źródłowy (LoginPage.rb):
-~~~
+```
 def mapNameToSelecto*r*(name)
-~~~
+```
 
 Kod źródłowy (pages.rb):
-~~~
+```
 when 'log i*n*'
-~~~
+```
 
 ### Task 2
 
 ZADANIE: Uzupełnienie scenariusza według gotowych i zaimplementowanych już kroków.
+
 ROZWIĄZANIE:
 
 Scenariusz:
-~~~
+```
 Scenario: Closing list
   Given I am on lists page
   And I typed "My new list" into new list field
@@ -372,15 +311,16 @@ Scenario: Closing list
   And *I go to lists page*
   Then *I should see "Lists for krystian"*
   And I should not see "My new list"
-~~~
+```
 
 ### Task 3
 
 ZADANIE: Częściowa implementacja każdego fragmentu po trochu - opis scenariusza, implementacja kroków i poprawki literówek w jednym pliku (selektor XPATH jest z błędami).
+
 ROZWIĄZANIE:
 
 Scenariusz:
-~~~
+```
 Scenario: Closing all tasks on the list
   Given I am on lists page
   And I typed "Someday it will be a closed list" into new list field
@@ -402,21 +342,21 @@ Scenario: Closing all tasks on the list
   And I go to lists page
   Then *I should see "Lists for krystian"*
   And I should not see "Someday it will be a closed list"
-~~~
+```
 
 Kod źródłowy (TaskListPage.rb):
-~~~
+```
 def selectCheckBoxNearName(name)
   @session.find(
     :xpath,
     "/html/body/section/ul/li/div/span[contains(text(), '#{name}*'*)]/*.*./preceding-sibling::lab*e*l"
   )
 end
-~~~
+```
 
 Kod źródłowy (interactions.rb):
-~~~
+```
 Given(/^I cleared (.+?)$/) do |name|
   *@page.type("", name)*
 end
-~~~
+```
