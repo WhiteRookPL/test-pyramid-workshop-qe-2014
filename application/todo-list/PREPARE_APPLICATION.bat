@@ -1,1 +1,0 @@
-bundle install & bundle exec rake db:migrate & bundle exec rake db:seed & bundle exec rake db:test:clone & bundle exec rake bower:install

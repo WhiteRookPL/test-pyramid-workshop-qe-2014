@@ -1,1 +1,0 @@
-bundle exec rake db:drop & bundle exec rake db:migrate & bundle exec rake db:seed & bundle exec rake db:test:clone & pushd gui-tests & bundle exec cucumber features -c -t ~@skip & popd
