@@ -11,15 +11,9 @@ Feature: Tasks Management
     And "Task to do" item should be opened
 
   Scenario: Task should has a date
-    #
-    # Zadanie BDD_2:
-    #
-    # Zaimplementuj zgodnie z formatem Given/When/Then test, który spwawdzi czy zadanie ma datę.
-    # Pamiętaj - wystarczą tylko te 3 kroki, i cała reszta jest już zbudowana.
-    #
-    Given ...
-    When ...
-    Then ...
+    Given there is one list named "Non-empty list" with one item named "Item on the list"
+    When "Non-empty list" will be opened
+    Then "Item on the list" item should have today's date
 
   Scenario: Task should have a default state "Open"
     Given there is one list named "Non-empty list" with one item named "Opened by default"
