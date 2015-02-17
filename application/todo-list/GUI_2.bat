@@ -1,1 +1,1 @@
-git checkout 9ffa81a82084482521078807be3b8ee6f2870653 > NUL
+git checkout tags/GUI_2 -q

@@ -1,1 +1,1 @@
-git checkout 5d0db70072e037916aa537c32e0312bcde67bf2c > NUL
+git checkout tags/BDD_3 -q
